@@ -1,18 +1,4 @@
-<!doctype html>
-<html>
 <head>
-<meta charset="UTF-8">
-<title>Virgil: Dashboard</title>
-
-<meta name="description" content="Virgil: Frequently asked questions.">
-<meta name="author" content="Dan Tashman">
-
-
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-
-  <link href='http://fonts.googleapis.com/css?family=Lato|Muli|Oxygen' rel='stylesheet' type='text/css'>
 
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
@@ -50,9 +36,6 @@
 <body>
 
 
-      <%= render "partials/header" %>    
-
-
 <div id="top-of-page-padding"></div>
 
 <div class="outer-shell">
@@ -63,27 +46,31 @@
 
 <div class="option-box border-green">
 
-            <div class="iconbox">
-            		 <div class="inner-icon-box info-green">
-                            	<div class="infosprite"></div>
-                       </div> <!--end inner-icon-box-->
-             </div> <!--end iconbox-->
-                    
-            <div class="switchbox">
+                <div class="iconbox">
+                		 <div class="inner-icon-box info-green">
+                                	<div class="infosprite"></div>
+                           </div> <!--end inner-icon-box-->
+                 </div> <!--end iconbox-->
+                        
+                <div class="switchbox">
             
-            		  <div class="textbox">
-                      			<h2>Basic Info</h2>
-                               <h3>Just the facts</h3>
-                        </div> <!--end textbox-->
+            		<div class="textbox">
+                      		<h2>Basic Info</h2>
+                          <h3>Just the facts</h3>
+                  </div> <!--end textbox-->
                                                     
-                         <div class="switch switch-large border-green info-green">
+                   <div class="switch switch-large border-green info-green">
               				  <input type="checkbox" checked />
-                		</div> <!--end switch-->
+                	 </div> <!--end switch-->
 
-					<a href="Basic-Info-Form.html"><div class="edit-button info-green">
-                            		<p>Edit</p>
-                            </div> <!--end edit button-->
-                    </a>
+
+      					<div class="edit-button info-green">
+
+                  <%= link_to "basic_info" %>
+
+                      <p>Edit</p>
+                 </div> <!--end edit button-->
+                    
 
      	</div> <!--end switchbox-->
     
@@ -92,7 +79,7 @@
 
 				
         		</div> <!--end float-left-->
-        <div class="float-right">
+            <div class="float-right">
 
 
 
@@ -106,16 +93,19 @@
                     
             <div class="switchbox">
             
-            		  <div class="textbox">
+            		    <div class="textbox">
                       			<h2>Phone</h2>
-                               <h3>Important people</h3>
-                        </div> <!--end textbox-->
+                            <h3>Important people</h3>
+                    </div> <!--end textbox-->
                                                     
                         <div class="switch switch-large phone-blue border-blue">
               				  <input type="checkbox" checked />
                 		</div> <!--end switch-->
 	
-                    <a href="Phone-Form.html" class="edit-button phone-blue">
+                    <div class="edit-button phone-blue">
+                      
+                       <%= link_to "phone" %>
+
                     <p>Edit</p>
                     </a><!--end edit button-->
 
@@ -129,7 +119,6 @@
         
         <div class="float-clear"></div>
         
-        <div class="row">
         <div class="float-left">
 
 
@@ -153,8 +142,12 @@
               				  <input type="checkbox" checked />
                 		</div> <!--end switch-->
 	
-                    <a href="Places-Form.html">
+                  
                       <div class="edit-button places-orange">
+
+                             <%= link_to "places" %>
+
+
                           <p>Edit</p>
                       </div> <!--end edit button-->
                     </a>
@@ -178,17 +171,21 @@
                     
             <div class="switchbox">
             
-            		  <div class="textbox">
+            		     <div class="textbox">
                       			<h2>Home</h2>
-                               <h3>Get me there now</h3>
-                        </div> <!--end textbox-->
+                            <h3>Get me there now</h3>
+                     </div> <!--end textbox-->
                                                     
-                              <div class="switch switch-large border-lavender home-lavender">
+                    <div class="switch switch-large border-lavender home-lavender">
               				  <input type="checkbox" checked />
                 		</div> <!--end switch-->
 	
-                    <a href="Home-Form.html">
+                  
                     <div class="edit-button home-lavender">
+
+                           <%= link_to "take_me_home" %>
+
+
                     <p>Edit</p>
                     </div> <!--end edit button-->
                     </a>
@@ -209,24 +206,28 @@
 <div class="option-box border-red">
 
             <div class="iconbox">
-                            <div class="inner-icon-box medical-red">
-                            			<div class="medsprite"></div>
-                            </div> <!--end inner-icon-box-->
+                      <div class="inner-icon-box medical-red">
+                            <div class="medsprite"></div>
+                      </div> <!--end inner-icon-box-->
              </div> <!--end iconbox-->
                     
             <div class="switchbox">
             
             		  <div class="textbox">
                       			<h2>Medical</h2>
-                               <h3>Optional info and links</h3>
+                             <h3>Optional info and links</h3>
                         </div> <!--end textbox-->
                                                     
                                <div class="switch switch-large border-red medical-red">
               				  <input type="checkbox" checked />
                 		</div> <!--end switch-->
 	
-                    <a href="Medical-Form.html">
+                   
                     <div class="edit-button medical-red">
+
+                           <%= link_to "medical" %>
+
+
                     <p>Edit</p>
                     </div> <!--end edit button-->
                     </a>
@@ -253,15 +254,18 @@
             
             		  <div class="textbox">
                       			<h2>Video link</h2>
-                               <h3>For complex situtions</h3>
+                            <h3>For complex situtions</h3>
                         </div> <!--end textbox-->
                                                     
                              <div class="switch switch-large video-purple border-purple">
               				  <input type="checkbox" checked />
                 		</div> <!--end switch-->
 	
-                    <a href="Video-Form.html">
+                  
                     <div class="edit-button video-purple">
+
+                           <%= link_to "video" %>
+
                     <p>Edit</p>
                     </div> <!--end edit button-->
                     </a>
@@ -284,20 +288,18 @@
  
  
 <div class="directionsbox">
+
 		<h2>Directions</h2>
+
         <h3>The Dashboard lets you choose what information you want to display.</h3>
+
         <h3>Choose any of the 6 options above.</h3>
+
         <h4>Press EDIT to access the page, and enter the relevant information you need. Toggle the ON/OFF switch to display that feature on your mobile device.</h4>
+
         <h4>*Note: Virgil is meant to be RUN on a phone and EDITED on a desktop/tablet.</h4>
 
 </div> <!--end directionsbox-->
 
  
  
-
-      <%= render "partials/footer" %>    
-
-
-
-</body>
-</html>
