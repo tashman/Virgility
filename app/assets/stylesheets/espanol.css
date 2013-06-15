@@ -1,0 +1,75 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@charset "UTF-8";
+/* CSS Document for Learn More: Virgil*/
+
+body  {
+	background-color: #FFF;
+	color: #000;
+
+}
+a {
+	text-decoration: none;
+}
+
+h1 {
+	font-family: 'Varela Round', sans-serif;
+	font-size: 1px;
+	visibility: hidden; 
+	margin-top: -2px;
+}
+
+h2 {
+	font-family: 'Varela Round', sans-serif;
+	font-size:40px;
+	line-height: 40px;
+	font-weight:300;
+}
+
+h3 {
+	font-family: 'Muli', sans serif;
+	font-size: 26px;
+	line-height: 34px;	
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align:justify;
+	font-weight:300;
+	
+}
+
+.container {
+	margin: 0px auto;
+	position: relative;
+	top: 100px;
+}
+
+
+#header {
+	position: relative;
+	width: 100%;
+}
+
+#hero-box {
+	position: relative;
+	width: 90%;
+	padding-left: 50px;	
+	top: 60px;
+}
+
+
+
+
+ #content-box {
+	 position: relative;
+	 width: 90%;
+	margin-left: 75px;
+	top: 60px;
+	 
+ }
+  #content-box h2 {
+	  font-size: 40px;
+	  font-weight:400;
+  }
+ 
+

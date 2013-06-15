@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Virgil: Video Link Form</title>
+
+<meta name="description" content="Virgil: A Simple Mobile UI. Enter your basic profile information on this page.">
+<meta name="keywords" content="Virgil, Mobile, User Interface, UI, simple phone layout, special needs technology, info, profile, basic info">
+<meta name="author" content="Dan Tashman">
+
+ <link href='http://fonts.googleapis.com/css?family=Lato|Muli|Oxygen' rel='stylesheet' type='text/css'>
+
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+<style>
+
+.bumper {background-color: #8a26a2;	 top: 22px;}
+#master-formbox {margin: 100px auto;}
+.master-footer {
+	margin-top: 100px;
+	border : 1px solid #8a26a2;
+	}
+.master-header h2 {top: 0px;}
+.master-header h3 {padding-top: 10px;}
+</style>
+ 
+</head>
+
+<body>
+
+
+
+      <%= render 'partials/header' %>    
+
+
+
+ <div id="master-formbox">
+ 
+                  <div class="formbox-wrapper">
+                            <h3>Insert URL to YouTube/Vimeo link</h3>
+                               <form>
+                            <input type="text" name="url" class="formbox" placeholder=" ex. http://www.youtube.com/U34fb^a23">
+                            </form>
+                             <br />
+                   </div> <!--end formbox-wrapper-->
+                   
+                    <div class="clear"></div>
+                    
+                   <div class="formbox-wrapper">
+                             <h3>Descriptive text/call to action</h3>
+                            <form>
+                            <input type="text" name="calltoaction" class="formbox" placeholder=" Ex. 'This video shows what to do if Billy has a seizure'">
+                            </form>
+                            <br />
+                    </div> <!--end formbox-wrapper-->
+                    
+                 <div class="clear"></div>
+        
+
+             
+             <div class="buttonbox">
+         
+            	<input type="submit" class="button" name="video-preview" value="Preview">
+
+              				<input type="submit" class="button" name="video-save" value="Save">
+                            
+         
+   
+             <div id="previewbox">
+             			<iframe width="584" height="284" src="http://www.youtube.com/embed/h3pGGjdBzns?rel=0" frameborder="0" allowfullscreen></iframe>
+             </div> <!--end previewbox-->
+
+   
+ </div>
+
+ 
+ 
+        <div class="directionsbox">
+                <h2>Directions</h2>
+                <h3>This feature lets you upload a video explaining what do do in an emergency situation. </h3>
+                <h4>You can't be there all the time, but complex situations sometimes call for explicit instructions  that the primary user may not be able to communicate.</h4>
+                <h4>You create the video, and you share what you feel is necessary. Upload your video to YouTube,  Vimeo, or other service, and insert the link in the form above, as well as a clear call to action for anyone viewing this video.</h4>
+  
+        
+        </div> <!--end directionsbox-->
+
+
+
+      <%= render "partials/footer" %>    
+
+
+         
+
+               
+</body>
+</html>

@@ -1,0 +1,59 @@
+
+<body>
+
+    <div id="container">
+    
+            <div id="titlebox">
+                          <h2>Virgil: A Simple Mobile UI</h2>
+            </div> <!--end titlebox-->
+            
+            <div id="videobox">
+            	<iframe width="840" height="610" src="http://www.youtube.com/embed/h3pGGjdBzns?rel=0" frameborder="0" allowfullscreen></iframe>
+            </div><!--end videobox-->
+            
+            <div id="buttonbox">
+            
+              <div id="Learn_More_box">
+                    	<%= link_to "public/Learn-More" %>
+                        <div id="redbox">
+                                <h2>Learn More</h2>
+                            </div>
+                        </a>
+                        
+              </div> <!--end Learn_More_box-->
+                    
+                    <div id="Sign_Up_box">
+                    
+                    	 <%= link_to "public/Learn-More" %>
+                        <div id="bluebox">
+                                <h2>Sign Up</h2>
+                            </div>
+                        </a>
+                        
+              </div><!-- end Sign_Up_box-->
+                    
+      </div> <!--end buttonbox-->
+            
+            <div id="loginbox">
+            
+                    <form>
+                    <input type="text" name="index-username" class="formbox" placeholder=" username">
+                    </form>
+                    
+                    <form>
+                    <input type="password" name="index-password" class="formbox" placeholder=" password">
+                    </form>
+                    
+              <input type="submit" class="button" name="index-login" value="Login">
+            
+      </div> <!--end loginbox-->
+         
+            
+    </div><!--end container-->
+    
+
+
+      <%= render "partials/footer" %>    
+    
+</body>
+</html>

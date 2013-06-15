@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Virgil: Medical Info Form</title>
+
+<meta name="description" content="Virgil: A Simple Mobile UI. Enter your medical information on this page.">
+<meta name="keywords" content="Virgil, Mobile, User Interface, UI, simple phone layout, special needs technology, info, profile, medical, medical condition, doctyor , caregiver, medical info">
+<meta name="author" content="Dan Tashman">
+
+ <link href='http://fonts.googleapis.com/css?family=Lato|Muli|Oxygen' rel='stylesheet' type='text/css'>
+
+
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+  
+<style>
+.bumper {
+	background-color: #ed1a4d;	
+	border: 1px solid #ed1a4d;
+	top: 22px;
+	}
+#master-formbox {margin: 100px auto;}
+.master-footer {margin-top: 100px; border : 1px solid #ed1a4d;}
+</style>
+ 
+</head>
+
+<body>
+
+
+
+      <% render "partials/header" %>    
+
+
+   <div id="master-formbox">
+
+ 
+                  <div class="formbox-wrapper">
+                            <h3>Primary Condition</h3>
+                               <form>
+                            <input type="text" name="primary" class="formbox" placeholder=" ex. Down's Syndrome">
+                          
+                             <% form_for @user do |f| %>
+                            <%= f.label :primary, "Primary condition" %>
+                            <%= f.text_field :primary %>
+                            <% end %>
+                             </form>
+                             <br />
+                   </div> <!--end formbox-wrapper-->
+
+
+                   
+                    <div class="clear"></div>
+                    
+                   <div class="formbox-wrapper">
+
+                             <h3>Secondary Condition</h3>
+                            <form>
+                            <input type="text" name="secondary" class="formbox" placeholder=" ex. Hemophelia">
+                               
+                               <% form_for @user do |f| %>
+                                <%= f.label :secondary, "Secondary condition" %>
+                                <%= f.text_field :secondary %>
+                                <% end %>
+                                
+                                 </form>
+                            <br />
+                    </div> <!--end formbox-wrapper-->
+                    
+                 <div class="clear"></div>
+                        
+                <div class="formbox-wrapper">
+  
+
+                         <h3>Emergency Contact </h3>
+                        <input type="text" name="ec_name" class="formbox" placeholder=" ex. 'Mary', 'Mom', 'Dr. Jones'">
+                         <% form_for @user do |f| %>
+                        <%= f.label :emergency_contact, "Emergency Contact" %>
+                        <%= f.text_field :emergency_contact %>
+                        <% end %>
+                         </form>
+
+
+                         <h3>Emergency Contact #</h3>
+                        <input type="text" name="ec_number" class="formbox" placeholder=" ex. 212-555-1212">
+                        
+                       <% form_for @user do |f| %>
+                        <%= f.label :ec_number, "Emergency Contact Phone" %>
+                        <%= f.telephone_field :ec_number %>
+                        <% end %>
+
+                        </form>
+                        <br />
+                 </div> <!--end formbox-wrapper-->
+                 
+
+
+                  <div class="clear"></div>
+                         
+                  <div class="formbox-wrapper">
+
+                        <h3>Doctor Name (optional)</h3>
+                        <input type="text" name="doctor-name" class="formbox" placeholder=" ex. Dr. Smith">
+                       
+                       <% form_for @user do |f| %>
+                        <%= f.label :doctor_name, "Doctor phone" %>
+                        <%= f.text_field :doctor_name %>
+                        <% end %>
+                         </form>
+
+
+
+
+
+                          <h3>Doctor Phone (optional)</h3>
+                        <input type="text" name="doctor-number" class="formbox" placeholder=" ex. 212-555-1212">
+                         <% form_for @user do |f| %>
+  <%= f.label :doctor_phone, "Doctor phone number" %>
+  <%= f.telephone_field :doctor_phone %>
+  <% end %>
+</form>
+                        <br />
+                  </div> <!--end formbox-wrapper-->
+                  
+                   <div class="clear"></div>
+
+
+
+                     
+                   <div class="formbox-wrapper">
+
+
+                        <h3>Hospital Name (optional)</h3>
+                       
+                        <input type="text" name="hospital-name" class="formbox" placeholder=" ex. Mt. Sinai Hospital">
+                        <% form_for @user do |f| %>
+                        <%= f.label :doctor_name, "Hospital Name (optional)" %>
+                        <%= f.text_field :doctor_phone %>
+                        <% end %>
+
+                        </form>
+
+                              <h3>Hospital Phone (optional)</h3>
+                        <input type="text" name="hospital-number" class="formbox" placeholder=" ex. (212) 241-6500">
+                       
+                        <% form_for @user do |f| %>
+                        <%= f.label :hospital_number, "Hospital Phone # (optional)" %>
+                        <%= f.telephone_field :hospital_number %>
+                        <% end %>
+
+                        </form>
+                        <br />
+                   </div> <!--end formbox-wrapper-->
+                   
+                    <div class="clear"></div>
+                        
+
+          
+             <div class="checkbox-holder">
+                        <input type="checkbox" id="medical-image" class="regular-checkbox big-checkbox" /><label for="checkbox-2-1"></label>
+            			<h4>Check here to display your <a href="Basic-Info-Form.html">Basic Info</a> image</h4>
+		        </div> <!--end checkbox holder-->
+                             
+
+                          
+                 <div class="buttonbox">
+
+                 <input type="submit" class="button" name="medical-edit" value="Edit">
+                 <% form_for @user do |f| %>
+                  <%= f.label :edit, "Edit" %>
+                  <%= f.submit :edit %>
+                  <% end %>
+
+                  </div> <!--end buttonbox-->
+                       
+               <div class="buttonbox">
+
+                     <input type="submit" class="button" name="medical-submit" value="Save">          
+                    <% form_for @user do |f| %>
+                    <%= f.label "Save" %>
+                    <%= f.save %>
+                    <% end %>
+
+                </div> <!--end buttonbox-->
+                      
+                        
+
+
+ 
+      <% render "partials/footer" %>    
+
+           
+</body>
+</html>

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  home_address: MyString
+  home_url: MyString
+
+two:
+  home_address: MyString
+  home_url: MyString

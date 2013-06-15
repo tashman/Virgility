@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  basic_info: false
+  places: false
+  phone: false
+  home: false
+  video: false
+  medical: false
+
+two:
+  basic_info: false
+  places: false
+  phone: false
+  home: false
+  video: false
+  medical: false

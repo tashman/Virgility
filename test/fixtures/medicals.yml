@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  primary: MyString
+  secondary: MyString
+  doctor_name: MyString
+  doctor_phone: MyString
+  hospital_name: MyString
+  hospital_number: MyString
+
+two:
+  primary: MyString
+  secondary: MyString
+  doctor_name: MyString
+  doctor_phone: MyString
+  hospital_name: MyString
+  hospital_number: MyString

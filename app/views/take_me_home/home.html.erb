@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Virgil: Take Me Home</title>
+
+<meta name="description" content="Virgil: A Simple Mobile UI. Important Places/Locations.">
+<meta name="keywords" content="Virgil, Mobile, User Interface, UI, simple phone layout, special needs technology, info, profile, basic info">
+<meta name="author" content="Dan Tashman">
+
+ <link href='http://fonts.googleapis.com/css?family=Lato|Muli|Oxygen' rel='stylesheet' type='text/css'>
+
+
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+  
+ <style>
+ .bumper {background-color: #7186c3; top: 22px;}
+ .master-footer {border: 1px solid #7186c3;}
+ .container {margin: 110px auto;}
+ </style>
+ 
+</head>
+
+<body>
+
+  
+
+          
+
+      <%= render "partials/header" %>    
+          
+
+ <div class="container">
+     
+            <div class="formbox-wrapper">
+                     <h3>Enter your home address</h3>
+                    <input type="text" name="home-address" class="formbox" placeholder=" ex. '34 Valley Road, Walla Walla, WA 99632'">
+                    </form>
+                    <br />
+             </div><!-- end "formbox-wrapper-->
+          
+                 
+  
+
+         
+         <div class="buttonbox">
+         
+            	<input type="submit" class="button" value="Preview">
+
+              				<input type="submit" class="button" value="Save">
+    
+         <!--end buttonbox-->
+         
+
+     
+             
+             <div id="previewbox">
+             <iframe width="584" height="284" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=171+west+street+white+plains+ny&amp;aq=&amp;sll=42.746632,-75.770041&amp;sspn=6.018244,9.063721&amp;ie=UTF8&amp;hq=&amp;hnear=171+West+St,+White+Plains,+Westchester,+New+York+10605&amp;t=m&amp;ll=40.991755,-73.74238&amp;spn=0.011921,0.050039&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+             </div> <!--end previewbox-->
+             
+         
+
+ 
+ 
+    <div class="directionsbox">
+            <h3>Directions</h3>
+            <h4>"Take Me Home' will immediately produce a Google Map from your current location, to the one entered in the form above.</h4>
+            <h4>By entering your home address, you will always have the ability to find your way home with a single button push.</h4>
+            <h4>Use the preview button to confirm your address, then press 'SAVE' to imprint it on the mobile app.</h4>
+    </div> <!--end directionsbox-->
+
+
+</div> <!--end container-->
+         </div>
+         </div>
+
+
+
+
+
+      <%= render "partials/footer" %>    
+
+         
+</body>
+</html>

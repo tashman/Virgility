@@ -1,0 +1,2 @@
+class TakeMeHomeController < ApplicationController
+end
