@@ -12,7 +12,7 @@
 </div> <!--end master header-->
 
 
-   <div id="master-formbox">
+   <div class="master-formbox formbox-medical">
 
  
                   <div class="formbox-wrapper">
@@ -21,7 +21,6 @@
                             <input type="text" name="primary" class="formbox">
                           
                             <% form_for @user do |f| %>
-                               <%= f.label :primary, "Primary condition" %>
                                <%= f.text_field :primary, :placeholder => " ex. Down's Syndrome"%>
                             <% end %>
 
@@ -35,12 +34,11 @@
                     
                    <div class="formbox-wrapper">
 
-                             <h3>Secondary Condition</h3>
+                             <h3>Secondary Condition (optional)</h3>
                             <form>
                             <input type="text" name="secondary" class="formbox">
                                
                               <% form_for @user do |f| %>
-                                <%= f.label :secondary, "Secondary condition (optional)" %>
                                 <%= f.text_field :secondary, :placeholder => " ex. Hemophelia" %>
                               <% end %>
 
@@ -169,7 +167,7 @@
                   
 
    <div class="master-footer red-footer ">
-    
+
           <ul>
             <li><h5>©2013<a href="http://www.about.me/dantashman" target="_blank"> Dan Tashman</a></h5></li>
             <li><%= link_to "home/index" %><img src="images/house.png" width="32" height="32" alt="home-icon" /></li>

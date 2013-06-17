@@ -98,13 +98,39 @@ h2 {
 	border: 1px solid #ed1a4d;
 	top: 22px;
 	}
+	
 .formbox-medical {margin: 100px auto;}
 
 .red-footer {margin-top: 100px; border : 1px solid #ed1a4d;}
 
 
  .home-bumper {background-color: #7186c3; top: 22px;}
+
  .home-footer {border: 1px solid #7186c3;}
  
+
+.video-bumper {
+	background-color: #8a26a2;
+	top: 22px;
+	}
+
+.video-footer {
+	margin-top: 100px;
+	border : 1px solid #8a26a2;
+	}
+
+ .phone-bumper {background-color: #1f0066; top: 22px; }
+
+ .phone-footer {margin-top: 50px; border:1px solid #1f0066;}
+
+ .places-bumper {
+	background-color: #F90; 
+	top: 22px;
+	}
+
+ .places-footer {
+ 	margin-top: 450px;
+  	border : 1px solid #F90;
+  	 }
 
 
