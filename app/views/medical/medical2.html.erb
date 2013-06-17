@@ -1,38 +1,15 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Virgil: Medical Info Form</title>
 
-<meta name="description" content="Virgil: A Simple Mobile UI. Enter your medical information on this page.">
-<meta name="keywords" content="Virgil, Mobile, User Interface, UI, simple phone layout, special needs technology, info, profile, medical, medical condition, doctyor , caregiver, medical info">
-<meta name="author" content="Dan Tashman">
+<div class="master-header">
 
- <link href='http://fonts.googleapis.com/css?family=Lato|Muli|Oxygen' rel='stylesheet' type='text/css'>
+        <%= link_to "home/index" %><img src="images/Virgil-Logo.png">
 
+        <h2>Virgil: Phone</h2>
 
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+        <h3>Welcome, <%= first_name %></h3>
 
-  
-<style>
-.bumper {
-	background-color: #ed1a4d;	
-	border: 1px solid #ed1a4d;
-	top: 22px;
-	}
-#master-formbox {margin: 100px auto;}
-.master-footer {margin-top: 100px; border : 1px solid #ed1a4d;}
-</style>
- 
-</head>
-
-<body>
-
-
-
-      <% render "partials/header" %>    
+        <div class="bumper red-bumper"></div>
+        
+</div> <!--end master header-->
 
 
    <div id="master-formbox">
@@ -41,12 +18,13 @@
                   <div class="formbox-wrapper">
                             <h3>Primary Condition</h3>
                                <form>
-                            <input type="text" name="primary" class="formbox" placeholder=" ex. Down's Syndrome">
+                            <input type="text" name="primary" class="formbox">
                           
-                             <% form_for @user do |f| %>
-                            <%= f.label :primary, "Primary condition" %>
-                            <%= f.text_field :primary %>
+                            <% form_for @user do |f| %>
+                               <%= f.label :primary, "Primary condition" %>
+                               <%= f.text_field :primary, :placeholder => " ex. Down's Syndrome"%>
                             <% end %>
+
                              </form>
                              <br />
                    </div> <!--end formbox-wrapper-->
@@ -59,13 +37,13 @@
 
                              <h3>Secondary Condition</h3>
                             <form>
-                            <input type="text" name="secondary" class="formbox" placeholder=" ex. Hemophelia">
+                            <input type="text" name="secondary" class="formbox">
                                
-                               <% form_for @user do |f| %>
-                                <%= f.label :secondary, "Secondary condition" %>
-                                <%= f.text_field :secondary %>
-                                <% end %>
-                                
+                              <% form_for @user do |f| %>
+                                <%= f.label :secondary, "Secondary condition (optional)" %>
+                                <%= f.text_field :secondary, :placeholder => " ex. Hemophelia" %>
+                              <% end %>
+
                                  </form>
                             <br />
                     </div> <!--end formbox-wrapper-->
@@ -76,24 +54,28 @@
   
 
                          <h3>Emergency Contact </h3>
-                        <input type="text" name="ec_name" class="formbox" placeholder=" ex. 'Mary', 'Mom', 'Dr. Jones'">
+
+                        <input type="text" name="ec_name" class="formbox">
+
                          <% form_for @user do |f| %>
-                        <%= f.label :emergency_contact, "Emergency Contact" %>
-                        <%= f.text_field :emergency_contact %>
+                            <%= f.label :emergency_contact, "Emergency Contact" %>
+                            <%= f.text_field :emergency_contact, :placeholder => " ex. 'Mary', 'Mom', 'Dr. Jones'"  %>
                         <% end %>
+
                          </form>
 
 
                          <h3>Emergency Contact #</h3>
-                        <input type="text" name="ec_number" class="formbox" placeholder=" ex. 212-555-1212">
+                        <input type="text" name="ec_number" class="formbox">
                         
                        <% form_for @user do |f| %>
-                        <%= f.label :ec_number, "Emergency Contact Phone" %>
-                        <%= f.telephone_field :ec_number %>
+                         <%= f.label :ec_number, "Emergency Contact Phone" %>
+                          <%= f.telephone_field :ec_number, :placeholder => " ex. 212-555-1212"  %>
                         <% end %>
 
                         </form>
                         <br />
+
                  </div> <!--end formbox-wrapper-->
                  
 
@@ -103,31 +85,29 @@
                   <div class="formbox-wrapper">
 
                         <h3>Doctor Name (optional)</h3>
-                        <input type="text" name="doctor-name" class="formbox" placeholder=" ex. Dr. Smith">
+                        <input type="text" name="doctor-name" class="formbox">
                        
-                       <% form_for @user do |f| %>
-                        <%= f.label :doctor_name, "Doctor phone" %>
-                        <%= f.text_field :doctor_name %>
+                        <% form_for @user do |f| %>
+                           <%= f.label :doctor_name, "Doctor name (optional)" %>
+                            <%= f.text_field :doctor_name, :placeholder => " ex. Dr. Smith"  %>
                         <% end %>
+
                          </form>
 
 
 
-
-
                           <h3>Doctor Phone (optional)</h3>
-                        <input type="text" name="doctor-number" class="formbox" placeholder=" ex. 212-555-1212">
+                        <input type="text" name="doctor-number" class="formbox">
                          <% form_for @user do |f| %>
-  <%= f.label :doctor_phone, "Doctor phone number" %>
-  <%= f.telephone_field :doctor_phone %>
-  <% end %>
-</form>
+                            <%= f.label :doctor_name, "Doctor name (optional)" %>
+                            <%= f.text_field :doctor_name, :placeholder => " ex. Dr. Smith"  %>
+                        <% end %>
+                        </form>
                         <br />
+
                   </div> <!--end formbox-wrapper-->
                   
                    <div class="clear"></div>
-
-
 
                      
                    <div class="formbox-wrapper">
@@ -135,20 +115,21 @@
 
                         <h3>Hospital Name (optional)</h3>
                        
-                        <input type="text" name="hospital-name" class="formbox" placeholder=" ex. Mt. Sinai Hospital">
-                        <% form_for @user do |f| %>
-                        <%= f.label :doctor_name, "Hospital Name (optional)" %>
-                        <%= f.text_field :doctor_phone %>
+                        <input type="text" name="hospital-name" class="formbox">
+
+                         <% form_for @user do |f| %>
+                          <%= f.label :hospital_name, "Hospital Name (optional)" %>
+                          <%= f.text_field :hospital_name, :placeholder => " ex. Mt. Sinai Hospital" %>
                         <% end %>
 
                         </form>
 
                               <h3>Hospital Phone (optional)</h3>
-                        <input type="text" name="hospital-number" class="formbox" placeholder=" ex. (212) 241-6500">
+                        <input type="text" name="hospital-number" class="formbox">
                        
                         <% form_for @user do |f| %>
-                        <%= f.label :hospital_number, "Hospital Phone # (optional)" %>
-                        <%= f.telephone_field :hospital_number %>
+                          <%= f.label :hospital_number, "Hospital Phone # (optional)" %>
+                          <%= f.telephone_field :hospital_number, :placeholder => " ex. (212) 241-6500" %>
                         <% end %>
 
                         </form>
@@ -185,13 +166,18 @@
                     <% end %>
 
                 </div> <!--end buttonbox-->
-                      
+                  
+
+   <div class="master-footer red-footer ">
+    
+          <ul>
+            <li><h5>©2013<a href="http://www.about.me/dantashman" target="_blank"> Dan Tashman</a></h5></li>
+            <li><%= link_to "home/index" %><img src="images/house.png" width="32" height="32" alt="home-icon" /></li>
+           <li><h6><%= link_to "public/FAQ" %></h6></li>
+           <li><h6><% link_to "public/espanol" %>Virgil en Espanol</h6></li>
+         
+          </ul>
+  </div> 
+
                         
-
-
  
-      <% render "partials/footer" %>    
-
-           
-</body>
-</html>
