@@ -91,7 +91,7 @@ h2 {
 
 .green-master-footer {margin-top: 200px;border:1px solid #2faf2f;}
 
-.formbox-basic {margin: 80px auto;	}
+.formbox-basic {margin: 80px auto;}
 
 .red-bumper {
 	background-color: #ed1a4d;	
@@ -99,4 +99,12 @@ h2 {
 	top: 22px;
 	}
 .formbox-medical {margin: 100px auto;}
+
 .red-footer {margin-top: 100px; border : 1px solid #ed1a4d;}
+
+
+ .home-bumper {background-color: #7186c3; top: 22px;}
+ .home-footer {border: 1px solid #7186c3;}
+ 
+
+
