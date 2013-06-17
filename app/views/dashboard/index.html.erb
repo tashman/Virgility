@@ -1,9 +1,16 @@
-<head>
 
+<div class="master-header">
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
-<script src="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.js"></script>
+        <%= link_to "home/index" %><img src="images/Virgil-Logo.png">
+
+        <h2>Virgil: Phone</h2>
+
+        <h3>Welcome, Username</h3>
+
+        <div class="bumper green-bumper"></div>
+        
+</div> <!--end master header-->
+
 
 <script>
     window.prettyPrint && prettyPrint();
@@ -23,17 +30,6 @@
     });
 </script>
 
-
-<style>
-.master-header img {left: -46px;}
-.master-footer {margin-top: 1100px; border: 1px solid  #2faf2f; }
-.bumper {top: 22px;	}
-</style>
-
-   
-</head>
-
-<body>
 
 
 <div id="top-of-page-padding"></div>
@@ -302,4 +298,10 @@
 </div> <!--end directionsbox-->
 
  
- <%= render "partials/footer" %>
+               
+<div class="master-footer green-footer">
+
+   <%= render "partials/footer" %>
+   
+</div> 
+<!--end master footer-->

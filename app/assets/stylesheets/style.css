@@ -89,7 +89,7 @@ h2 {
 
 .green-bumper {background-color: #2faf2f;top: 22px;}
 
-.green-master-footer {margin-top: 200px;border:1px solid #2faf2f;}
+.green-footer {margin-top: 200px;border:1px solid #2faf2f;}
 
 .formbox-basic {margin: 80px auto;}
 
@@ -98,13 +98,18 @@ h2 {
 	border: 1px solid #ed1a4d;
 	top: 22px;
 	}
-	
+
 .formbox-medical {margin: 100px auto;}
 
-.red-footer {margin-top: 100px; border : 1px solid #ed1a4d;}
+.red-footer {margin-top: 100px; 
+	border : 1px solid #ed1a4d;
+	}
 
 
- .home-bumper {background-color: #7186c3; top: 22px;}
+ .home-bumper {
+ 	background-color: #7186c3; 
+ 	top: 22px;
+	 }
 
  .home-footer {border: 1px solid #7186c3;}
  

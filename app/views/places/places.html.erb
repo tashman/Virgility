@@ -5,7 +5,7 @@
 
         <h2>Virgil: Phone</h2>
 
-        <h3>Welcome, Username</h3>
+        <h3>Welcome, <%= first_name %></h3>
 
         <div class="bumper places-bumper"></div>
         
@@ -15,33 +15,55 @@
  
  
            <div class="formbox-wrapper">
+
                      <h3>Place Name</h3>
+
                     <form>
-                    <input type="text" name="place_name" class="formbox" placeholder=" i.e. 'Dentist', 'Work', 'Grandma's House'">
+                      <input type="text" name="place_name" class="formbox">
+                           <% form_for @user do |f| %>
+                           <%= f.text_field :place_address, :placeholder => " ex. '34 Valley Road, Walla Walla, WA 99362'" %>
+                            <% end %>
                     </form>
+
                     <br />
             </div> <!--end formbox-wrapper-->
             
              <div class="clear"></div>
                     
             <div class="formbox-wrapper">
-                     <h3>Address</h3>
-                    <input type="text" name="place_address" class="formbox" placeholder=" ex. '34 Valley Road, Walla Walla, WA 99362'">
+
+                   <h3>Address</h3>
+
+                    <form>
+                      <input type="text" name="place_address" class="formbox">
+                       <% form_for @user do |f| %>
+                        <%= f.text_field :place_name, :placeholder => " ex. 'Dentist', 'Work', 'Grandma's House'" %>
+                        <% end %>
                     </form>
+
                     <br />
+
              </div> <!--end formbox-wrapper-->
              
               <div class="clear"></div>
-                     
-          
+                    
 
-         
          <div class="buttonbox">
          
-              <input type="submit" class="button" value="Preview">
+              <form>
+                <input type="submit" class="button" value="Preview">
+                   <% form_for @user do |f| %>
+                    <%= f.submit :preview %>
+                    <% end %>
+              </form>
 
+               <form>
                       <input type="submit" class="button" value="Save">
-                            
+                      <% form_for @user do |f| %>
+                      <%= f.label "Save" %>
+                      <%= f.save %>
+                      <% end %> 
+                </form>
        </div> <!--end buttonbox;-->       
        
 
