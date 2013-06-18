@@ -1,0 +1,96 @@
+@-ms-viewport
+{
+	width: 380px;
+}
+
+@-webkit-viewport
+{
+	width: 380px;
+}
+
+@-o-viewport
+{
+	width: 380px;
+}
+
+@-moz-viewport
+{
+	width: 380px;
+}
+
+@viewport
+{
+	width: 380px;
+}
+
+html
+{
+	background-color: #FFFFFF;
+}
+
+#page
+{
+	z-index: 1;
+	width: 380px;
+	min-height: 555px;
+	background-image: none;
+	border-style: none;
+	border-color: transparent;
+	background-color: #FFFFFF;
+	padding-bottom: 15px;
+}
+
+#u1551-3
+{
+	z-index: 3;
+	width: 5px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 89px;
+	left: -347px;
+}
+
+#u1548
+{
+	z-index: 2;
+	width: 328px;
+	border-width: 3px;
+	border-style: solid;
+	border-color: #000000;
+	background-color: #FFFFFF;
+	padding-bottom: 198px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 26px;
+	left: 21px;
+}
+
+#u1549-4
+{
+	z-index: 6;
+	width: 264px;
+	min-height: 68px;
+	text-align: center;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 173px;
+	left: 33px;
+}
+
+#u1550-4
+{
+	z-index: 10;
+	width: 64px;
+	min-height: 41px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 514px;
+	left: 159px;
+}
+
+#page .verticalspacer
+{
+	clear: both;
+	margin-bottom: -513px;
+}
+

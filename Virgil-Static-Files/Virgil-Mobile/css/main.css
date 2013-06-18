@@ -1,0 +1,180 @@
+@charset "UTF-8";
+/* CSS Document */
+body {
+		margin: 0px, auto;
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+a {
+	text-decoration: none;
+	color: #FFF;
+}
+
+.frame {
+	width: 100%;
+	height: 480px;
+	margin: 0px,  auto;
+	text-align:center;
+	color: #000;
+	font-family: 'Muli', sans serif
+	
+}
+
+
+h1 { 
+	visibility:hidden; 
+	margin-top: -2px;
+	font-size: 1px;
+}
+
+h2 { 
+font-family: 'Muli', sans serif;
+	font-weight: 300;
+	text-align: center;
+	font-size: 32pt;
+	margin-top: auto;
+	line-height:44pt;
+}
+
+h3 {
+	font-family: 'Muli', sans serif;
+	font-weight: 300;
+	font-size: 18pt;
+}
+
+h5 { 	
+	position: relative;
+	font-family: 'Muli', sans serif;
+	font-weight: 200;
+	font-size: 28px;
+	line-height: 14px;
+	text-align: center;
+	margin-top: 24px
+	
+	}
+
+#videoframe {
+	width: 100%;
+	margin-left: 50%;
+	left: 150px;
+	height: 150px;
+	background-color: #FFF;
+	margin: 4px 8px 0px 8px;
+	border: solid 3px #2faf2f;
+}
+
+	
+#namebox {
+	width: 100%;
+	height: 30px;
+	text-align: center;
+}
+
+#primary {
+	width: 100%;
+	height: 20px;
+	text-align: center;
+	margin-bottom: -10px;
+	margin-top: 10px;
+
+}
+
+
+
+#namebox h3 {
+	font-size: 36px
+}
+
+
+#secondary {
+	width: 100%;
+	height: 20px;
+	text-align: center;
+
+}
+#description {
+	width: 90%;
+	text-align: center;
+	margin-left: 5%;
+	margin-bottom: -10px;
+	margin-top: -10px;
+	line-height: 28px;
+	font-size: 24px;
+}
+
+#Buttonarea {
+	margin-left: 5%;
+	margin-right: 5%;
+	height: 120px;
+	width: 90%;
+
+}
+
+
+#buttonA {
+	float: left;
+	height: 60px;
+	width: 49%;
+	background-color: #2faf2f;
+}
+
+#buttonA:hover {
+		background-color: #000;
+		color: #FFF;
+}
+
+#buttonB {
+	float: right;
+	height: 60px;
+	width: 49%;
+	background-color: #2faf2f;
+}
+
+#buttonB:hover {
+		background-color: #000;
+		color: #FFF;
+}
+
+#buttonC {
+	float: left;
+	height: 60px;
+	width: 49%;
+	background-color: #2faf2f;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+#buttonC:hover {
+		background-color: #000;
+		color: #FFF;
+}
+
+
+#buttonD {
+	float: right;
+	height: 60px;
+	width: 49%;
+	background-color: #2faf2f;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+#buttonD:hover {
+		background-color: #000;
+		color: #FFF;
+}
+
+#footer { 
+	background: url('../images/footer-bgd.png');
+	display: block;
+	background-position: center;
+	background-attachment: fixed;
+	background-color: #FFF;
+	height: 200px;
+	width: 100%;
+	margin-top: 10px;
+}
+
+
+

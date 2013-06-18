@@ -1,0 +1,77 @@
+<manifest alg="2" build="8" opt="false">
+  <folder name="css">
+    <file name="site_global.css" crc="4196172868"/>
+    <file name="master_a-master.css" crc="470991073" ref="sample-page:phone-form:main-info:dashboard:home-form:faq:index:aboutcontact:video-link:places-form:medical-form:overview"/>
+    <file name="sample-page.css" crc="3896311245" ref="sample-page"/>
+    <file name="phone-form.css" crc="267649194" ref="phone-form"/>
+    <file name="main-info.css" crc="4013666286" ref="main-info"/>
+    <file name="dashboard.css" crc="4049495636" ref="dashboard"/>
+    <file name="home-form.css" crc="10678220" ref="home-form"/>
+    <file name="faq.css" crc="4205902556" ref="faq"/>
+    <file name="index.css" crc="4044957021" ref="index"/>
+    <file name="aboutcontact.css" crc="3901876058" ref="aboutcontact"/>
+    <file name="video-link.css" crc="4011060447" ref="video-link"/>
+    <file name="places-form.css" crc="357246224" ref="places-form"/>
+    <file name="medical-form.css" crc="13461615" ref="medical-form"/>
+    <file name="overview.css" crc="459908116" ref="overview"/>
+  </folder>
+  <folder name="scripts">
+    <file name="museredirect.js" crc="3859090011" ref="index:main-info:places-form:phone-form:home-form:medical-form:dashboard:video-link"/>
+    <file name="jquery-1.8.3.min.js" crc="3828297711" ref="index:overview:main-info:places-form:phone-form:home-form:medical-form:dashboard:faq:aboutcontact:video-link:sample-page:phone>dashboard:phone>main-info:phone>phone-form:phone>medical-form:phone>home-form:phone>places-form:phone>video-link:phone>index:phone>map-to-home:phone>phone-confirm"/>
+    <file name="museutils.js" crc="4215913851" ref="index:overview:main-info:places-form:phone-form:home-form:medical-form:dashboard:faq:aboutcontact:video-link:sample-page:phone>dashboard:phone>main-info:phone>phone-form:phone>medical-form:phone>home-form:phone>places-form:phone>video-link:phone>index:phone>map-to-home:phone>phone-confirm"/>
+    <file name="pie.js" crc="3786417276" ref="index:overview:main-info:places-form:phone-form:home-form:medical-form:dashboard:faq:aboutcontact:video-link:sample-page:phone>dashboard:phone>main-info:phone>phone-form:phone>medical-form:phone>home-form:phone>places-form:phone>video-link:phone>index:phone>map-to-home:phone>phone-confirm"/>
+    <file name="jquery.watch.js" crc="4199601726" ref="index:overview:main-info:places-form:phone-form:home-form:medical-form:dashboard:faq:aboutcontact:video-link:sample-page:phone>dashboard:phone>main-info:phone>phone-form:phone>medical-form:phone>home-form:phone>places-form:phone>video-link:phone>index:phone>map-to-home:phone>phone-confirm"/>
+    <file name="webpro.js" crc="4060715896" ref="main-info"/>
+    <file name="jquery.tobrowserwidth.js" crc="4052033419" ref="phone>phone-form:phone>phone-confirm"/>
+  </folder>
+  <folder name="images">
+    <file name="house.png" crc="87083205" ref="index:overview:main-info:places-form:phone-form:home-form:medical-form:dashboard:faq:aboutcontact:video-link:sample-page"/>
+    <file name="info.png" crc="3966899116" ref="main-info:dashboard:phone>dashboard"/>
+    <file name="u487-17.png" crc="3803380408" ref="main-info"/>
+    <file name="u487-17-r.png" crc="3941175757" ref="main-info"/>
+    <file name="u487-17-m.png" crc="190570741" ref="main-info"/>
+    <file name="u487-17-fs.png" crc="3765582654" ref="main-info"/>
+    <file name="map-pin.png" crc="445955723" ref="places-form:dashboard:phone>dashboard:phone>places-form"/>
+    <file name="phone.png" crc="3882499143" ref="phone-form:dashboard:phone>dashboard:phone>phone-form"/>
+    <file name="house2.png" crc="4129481592" ref="home-form:dashboard:phone>dashboard"/>
+    <file name="med.png" crc="4009732888" ref="medical-form:dashboard:phone>dashboard"/>
+    <file name="video.png" crc="3845204635" ref="dashboard:video-link:phone>dashboard"/>
+    <file name="u312.png" crc="194818898" ref="dashboard"/>
+  </folder>
+  <folder name="phone">
+    <folder name="css">
+      <file name="map-to-home.css" crc="426843307" ref="phone>map-to-home"/>
+      <file name="phone-confirm.css" crc="64834897" ref="phone>phone-confirm"/>
+      <file name="video-link.css" crc="4082165541" ref="phone>video-link"/>
+      <file name="index.css" crc="60037774" ref="phone>index"/>
+      <file name="dashboard.css" crc="4042527030" ref="phone>dashboard"/>
+      <file name="main-info.css" crc="4268723878" ref="phone>main-info"/>
+      <file name="medical-form.css" crc="4037626468" ref="phone>medical-form"/>
+      <file name="places-form.css" crc="355212035" ref="phone>places-form"/>
+      <file name="home-form.css" crc="4055168791" ref="phone>home-form"/>
+      <file name="phone-form.css" crc="78720874" ref="phone>phone-form"/>
+    </folder>
+    <file name="dashboard.html" crc="4156581918" mt="1365876227168"/>
+    <file name="main-info.html" crc="4160894557" mt="1365808223347"/>
+    <file name="phone-form.html" crc="35697638" mt="1365876376026"/>
+    <file name="medical-form.html" crc="264421606" mt="1365808223360"/>
+    <file name="home-form.html" crc="99253963" mt="1365808223363"/>
+    <file name="places-form.html" crc="315088369" mt="1365876394201"/>
+    <file name="video-link.html" crc="3860902542" mt="1365808223369"/>
+    <file name="index.html" crc="4171859219" mt="1365808230826"/>
+    <file name="map-to-home.html" crc="3842744740" mt="1365807623594"/>
+    <file name="phone-confirm.html" crc="515250198" mt="1365876345384"/>
+  </folder>
+  <file name="index.html" crc="266071028" mt="1365816109223"/>
+  <file name="overview.html" crc="4192959902" mt="1365816398362"/>
+  <file name="main-info.html" crc="4270035258" mt="1365876472891"/>
+  <file name="places-form.html" crc="363277481" mt="1365876510495"/>
+  <file name="phone-form.html" crc="4098312199" mt="1365876550366"/>
+  <file name="home-form.html" crc="4070866390" mt="1365876692766"/>
+  <file name="medical-form.html" crc="358090905" mt="1365876625957"/>
+  <file name="dashboard.html" crc="356254711" mt="1365876097412"/>
+  <file name="faq.html" crc="96138311" mt="1365816109246"/>
+  <file name="aboutcontact.html" crc="4206027242" mt="1365816109248"/>
+  <file name="video-link.html" crc="4256375178" mt="1365876584357"/>
+  <file name="sample-page.html" crc="4274716152" mt="1365816109252"/>
+</manifest>

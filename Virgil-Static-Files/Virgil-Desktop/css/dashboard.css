@@ -1,0 +1,364 @@
+@charset "UTF-8";
+/* CSS stylesheet for Virgil by Dan Tashman */
+
+body { 
+	background: url('../images/footer-bgd.png');
+	display: block;
+	background-position: center;
+	background-attachment: fixed;
+	
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+
+.outer-shell {
+	position: relative;
+	margin: 95px auto;
+
+	width: 1100px;
+
+}
+
+.option-box { 
+	width: 500px;
+	background-color: #FFF;
+	height: 200px;
+	
+}
+
+.iconbox {
+	float: left;
+	height: 200px; 
+	width: 250px;
+}
+
+.inner-icon-box {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	margin-top: 25px;
+	margin-left: 25px;
+
+}
+
+.switchbox {
+	float: right;
+	height: 200px; 
+	width: 225px;
+	margin-right: 25px;
+}
+.textbox {
+	position: relative;
+	width: 200px;
+	text-align: center;
+	color: #000;
+	margin: 0px auto;
+	margin-right: 25px;
+	margin-top: -10px;
+}
+
+.textbox h2 {
+	position: relative;
+	font-family: 'Lato', sans serif;
+	font-size: 36px;
+}
+
+.textbox h3 {
+	position: relative;
+	font-family: 'Oxygen', sans serif;
+	font-size: 18px;
+	font-weight: 200;
+	width: 200px;
+	line-height: 23px;
+	margin: 0px auto;
+	margin-top: -25px;
+	}
+
+
+.edit-button {
+	display: block;
+	position: relative;
+	height: 40px;
+	width: 250px;
+	background-color: grey;
+	margin-left: -35px;
+	margin-top: 10px;
+	-webkit-transition: all .5s linear 0s;
+	-moz-transition: all .5s linear 0s;
+	-ms-transition: all .5s linear 0s;
+	-o-transition: all .5s linear 0s;
+	transition: all .5s linear 0s;	
+
+}
+
+.edit-button p {
+	font-size: 24px;
+	line-height: 40px;
+	font-family: 'Oxygen', sans serif;
+	color: #FFF;
+	margin: 0px auto;	
+	text-align: center;
+	text-transform:uppercase;
+}
+
+.edit-button:hover  {
+	background-color: black;	
+}
+
+
+.row {
+	display: inline;
+	margin: 0px auto;
+	height: 200px;	
+}
+
+.float-left { 
+	float: left; 
+	margin: 20px;
+}
+.float-right {
+	float: right; 
+	margin: 20px;
+}
+.float-clear: {
+	clear: both;
+	}
+
+.directionsbox {
+	position:absolute;
+	margin: 100px  auto;
+	width: 940px;
+	height: 250px;
+	display: block;
+	border: 3px solid #2faf2f;
+	background-color: #FFF;
+	top: 760px;
+	margin-left: 50%;
+	left: -470px;
+
+	
+}
+
+.directionsbox h2 {
+	position: relative;
+	text-align: center;
+	font-family: 'Lato', sans serif;
+	font-size: 28pt;
+	margin: 12px 10px;
+	font-weight:300;
+}
+
+
+.directionsbox h3,h4 {
+	position: relative;
+	text-align: center;
+	font-family: 'Lato', sans serif;
+	font-size: 18pt;
+	margin: 4px 10px;
+	font-weight:200;
+	
+}
+
+
+.info-green {
+background-color: #2faf2f; !important;
+}
+
+.phone-blue {
+	background-color: #1f0066; !important;
+}
+
+.places-orange {
+	background-color: #F90; !important;
+}
+
+.home-lavender {
+	background-color:#7186c3; !important;
+}
+.medical-red {
+	background-color:#ed1a4d; !important;
+}
+ 
+.video-purple {
+	background-color: #8a26a2; !important;
+	}
+	
+.border-green {
+		border: 4px solid #2faf2f;
+}
+.border-blue {
+		border: 4px solid #1f0066;
+}
+.border-orange {
+		border: 4px solid #F90;
+}
+.border-purple {
+		border: 4px solid #8a26a2;
+}
+.border-red {
+		border: 4px solid #ed1a4d;
+}
+.border-lavender {
+		border: 4px  solid #7186c3;
+}
+
+
+
+/*-------------ON/OFF Switch------------------*/
+
+/* ============================================================
+ * bootstrapSwitch v1.2 by Larentis Mattia @spiritualGuru
+ * http://www.larentis.eu/switch/
+ * ============================================================
+ * Licensed under the Apache License, Version 2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * ============================================================ */
+.has-switch {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  text-align: left;
+  overflow: hidden;
+  line-height: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  top:  3px;
+ left: -35px;
+}
+
+.has-switch.switch-large {
+  min-width: 242px;
+}
+
+.has-switch > div {
+  display: inline-block;
+  width: 150%;
+  position: relative;
+  top: 0;
+}
+.has-switch > div.switch-animate {
+  -webkit-transition: left 0.5s;
+  -moz-transition: left 0.5s;
+  -o-transition: left 0.5s;
+  transition: left 0.5s;
+}
+.has-switch > div.switch-off {
+  left: -50%;
+}
+.has-switch > div.switch-on {
+  left: 0%;
+}
+.has-switch input[type=checkbox] {
+  display: none;
+}
+.has-switch span,
+.has-switch label {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  font-size: 18px;
+  line-height: 18px;
+  
+}
+
+
+.has-switch span.switch-large,
+.has-switch label.switch-large {
+  padding-bottom: 5px;
+  padding-top: 5px;
+  font-size: 22px;
+  line-height: normal;
+}
+.has-switch label {
+  text-align: center;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  z-index: 100;
+  width: 34%;
+  color: #ffffff;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+.has-switch label:focus,
+.has-switch label:active,
+.has-switch label.active,
+.has-switch label.disabled,
+.has-switch label[disabled] {
+  color: #ffffff;
+  background-color: #2faf2f;
+  *background-color: #d9d9d9;
+}
+.has-switch label:active,
+.has-switch label.active {
+  background-color: #999;
+}
+.has-switch label i {
+  color: #000;
+  line-height: 18px;
+  pointer-events: none;
+}
+.has-switch span {
+  text-align: center;
+  z-index: 1;
+  width: 33%;
+}
+.has-switch span.switch-left {
+
+}
+
+
+.has-switch span.switch-right {
+  color: #333;
+  background-color: #f0f0f0;
+}
+
+.has-switch span.switch-right:hover,
+.has-switch span.switch-right:focus,
+.has-switch span.switch-right:active,
+.has-switch span.switch-right.active,
+.has-switch span.switch-right.disabled,
+.has-switch span.switch-right[disabled] {
+  color: #000;
+  background-color: #fff;
+  *background-color: #f2f2f2;
+}
+.has-switch span.switch-right:active,
+.has-switch span.switch-right.active {
+  background-color: #e6e6e6 \9;
+}
+.has-switch span.switch-primary,
+.has-switch span.switch-left {
+  color: #000;
+  background-color: #fff;
+}
+
+.has-switch span.switch-primary:hover,
+.has-switch span.switch-left:hover,
+.has-switch span.switch-primary:focus,
+.has-switch span.switch-left:focus,
+.has-switch span.switch-primary:active,
+.has-switch span.switch-left:active,
+.has-switch span.switch-primary.active,
+.has-switch span.switch-left.active,
+.has-switch span.switch-primary.disabled,
+.has-switch span.switch-left.disabled,
+.has-switch span.switch-primary[disabled],
+.has-switch span.switch-left[disabled] {
+  color: #000;
+  background-color: #fff;
+  *background-color: #0077b3;
+}

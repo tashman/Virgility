@@ -1,0 +1,157 @@
+@-ms-viewport
+{
+	width: 380px;
+}
+
+@-webkit-viewport
+{
+	width: 380px;
+}
+
+@-o-viewport
+{
+	width: 380px;
+}
+
+@-moz-viewport
+{
+	width: 380px;
+}
+
+@viewport
+{
+	width: 380px;
+}
+
+html
+{
+	background-color: #FFFFFF;
+}
+
+#page
+{
+	z-index: 1;
+	width: 320px;
+	min-height: 490px;
+	background-image: none;
+	border-style: none;
+	border-color: transparent;
+	background-color: #FFFFFF;
+	padding: 72px 26px 8px 34px;
+}
+
+#u1220-4
+{
+	z-index: 17;
+	width: 183px;
+	min-height: 46px;
+	margin-left: 57px;
+	position: relative;
+}
+
+#u1266-4
+{
+	z-index: 29;
+	width: 188px;
+	min-height: 34px;
+	margin-left: 61px;
+	margin-top: 12px;
+	position: relative;
+}
+
+#u1214
+{
+	z-index: 3;
+	width: 237px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #7F7F7F;
+	background-color: #FFFFFF;
+	padding-bottom: 6px;
+	margin-left: 37px;
+	margin-top: 11px;
+	position: relative;
+}
+
+#u1217-4
+{
+	z-index: 21;
+	width: 183px;
+	min-height: 33px;
+	color: #7F7F7F;
+	text-align: center;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 11px;
+	left: 25px;
+}
+
+#u1215
+{
+	z-index: 4;
+	width: 237px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #7F7F7F;
+	background-color: #FFFFFF;
+	padding-bottom: 7px;
+	margin-left: 37px;
+	margin-top: 18px;
+	position: relative;
+}
+
+#u1218-4
+{
+	z-index: 25;
+	width: 183px;
+	min-height: 33px;
+	color: #7F7F7F;
+	text-align: center;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 10px;
+	left: 25px;
+}
+
+#u1265
+{
+	z-index: 2;
+	width: 194px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #000000;
+	background-color: #FFFFFF;
+	padding-bottom: 5px;
+	margin-left: 55px;
+	margin-top: 29px;
+	position: relative;
+}
+
+#u1264-4
+{
+	z-index: 5;
+	width: 159px;
+	min-height: 46px;
+	font-size: 32px;
+	text-align: center;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 9px;
+	left: 17px;
+}
+
+#u1222-8
+{
+	z-index: 9;
+	width: 320px;
+	min-height: 46px;
+	text-align: center;
+	margin-top: 95px;
+	position: relative;
+}
+
+#page .verticalspacer
+{
+	clear: both;
+}
+

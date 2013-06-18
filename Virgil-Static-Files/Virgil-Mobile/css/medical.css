@@ -1,0 +1,200 @@
+@charset "UTF-8";
+/* CSS Document */
+body {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	font-family: 'Muli', sans serif;
+	text-align: center;
+			
+}
+
+a {
+text-decoration: none;	
+}
+
+.frame {
+	position: absolute;
+	width: 100%;
+	height: 480px;
+}
+
+
+h1 { 
+	visibility:hidden; 
+	margin-top: -2px;
+	font-size: 1px;
+}
+
+h2 { 
+	color: #000;
+	font-size: 36pt;
+}
+
+h3 {
+	color: #000;
+	font-size: 22pt;
+}
+
+h4 {
+
+	color: #000;
+	font-size: 13pt;
+}
+
+h5 {
+	color: #FFF;
+	font-size: 16pt;
+}
+
+
+<!-----------------body content ------------------>
+
+
+#contentframe {
+	position: relative;
+	height: 70%;
+	width: 100%;
+}
+
+#buttonframe {
+	position: relative;
+	height: 30%;
+	width: 100%;
+}
+
+#photoframe {
+	width: 100%;
+	height: 150px;
+	margin: 8px 8px -50px 8px;
+	
+}
+#photoframe img { border: solid 3px #red;}
+
+#namebox {
+
+}
+
+#primary {
+	height: 40px;
+	margin-top: -35px;
+}
+
+#namebox h3 {
+	margin-top:50px;
+	
+}
+
+
+#secondary {
+	height: 35px;
+	margin-left: 10px;
+	margin-top: -35px;
+}
+
+
+#description {
+	height: 28pt;
+	line-height: 14pt;
+	text-align: center;
+	margin-left: 10px;
+	margin-top: -20px;
+	padding-bottom: 30px;
+}
+
+<!-----------------buttons ------------------>
+
+
+#buttonbox {
+	width: 100%;
+	margin-top: 10px;
+}
+
+#buttonbox h5 {
+	position: relative;
+	font-size: 28px;
+	top: -34px;
+	
+}
+
+ #buttonbox:hover {
+	background-color: #000; 
+ }
+
+#buttonA {
+	position: relative;
+	height: 60px;
+	width: 96%;
+	background-color: red;
+	margin-left: 2%;
+	margin-right: 2%;
+	border: 5px solid #FFF;
+}
+
+
+#buttonA:hover {
+		background-color: #000;
+	
+}
+
+
+#buttonB {
+	position: relative;
+	height: 60px;
+	width: 96%;
+	background-color: red;
+	margin-left: 2%;
+	margin-right: 2%;
+	border: 5px solid #FFF;
+}
+
+#buttonB:hover {
+		background-color: #000;
+}
+
+
+#buttonC {
+	position: relative;
+	height: 60px;
+	width: 96%;
+	background-color: red;
+	margin-left: 2%;
+	margin-right: 2%;
+	border: 5px solid #FFF;
+}
+
+#buttonC:hover {
+		background-color: #000;
+}
+
+
+#clear {
+clear: both;	
+}
+
+<!-----------------footer ------------------>
+
+
+#footer { 
+	background: url('../images/footer-bgd.png');
+	display: block;
+	background-position: center;
+	background-attachment: fixed;
+	background-color: #FFF;
+	height: 200px;
+	width: 100%;
+	margin-top: 10px;
+}
+
+
+
+
+
+#footer .virgil-logo {
+	display: block;
+	position: relative;
+	margin-left: 50%;
+	left: -36px;
+	top: 10px;
+}
+

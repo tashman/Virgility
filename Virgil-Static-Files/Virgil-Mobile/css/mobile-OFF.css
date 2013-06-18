@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/* home.css for Virgil Mobile -- Dan Tashman */
+
+.frame {
+	width: 100%;
+	height: 100%;
+	text-align:center;
+	font-family: 'Lato', sans serif;
+	font-weight: 300;
+	
+}
+
+.frame a {
+	text-decoration:none;
+	color: #FFF;	
+}
+
+h1 { 
+	visibility:hidden; 
+	margin-top: -2px;
+	font-size: 1px;
+}
+
+h2 { 
+	font-size:48pt;
+	padding-top: 80px;
+}
+
+h3 {
+	font-family: 'Muli', sans serif;
+	color: #000;
+	font-size: 24pt;
+	line-height: 36px;
+	font-weight: 300;
+
+}
+
+
+.virgil-logo {
+	background: url('../images/sprite.png') no-repeat -300px -60px;
+	width: 99px;
+	height: 79px;
+
+}
+
+
+#masterbox {
+	margin: 0px, auto;
+}
+
+
+
+#bigbutton {
+	background:url('../images/NO.png');
+	position: relative;
+	width: 250px;
+	height: 250px;
+	margin-top: 25px;
+	margin-left: 50%;
+	left: -125px;
+}
+
+
+
+#alertbox {
+	width: 100%;
+	text-align: center;
+	}
+
+#footer { 
+	background: url('../images/footer-bgd.png');
+	display: block;
+	background-position: center;
+	background-attachment: fixed;
+	background-color: #FFF;
+	margin-top: 60px;
+	height: 200px;
+	width: 100%;
+
+
+}
+
+#footer .virgil-logo {
+	display: block;
+	position: relative;
+	margin-left: 50%;
+	left: -36px;
+	top: 10px;
+
+
+}
+/* CSS Document */
+

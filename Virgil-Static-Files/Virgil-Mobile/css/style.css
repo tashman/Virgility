@@ -1,0 +1,168 @@
+@charset "UTF-8";
+/* CSS Document */
+<!--stylesheet for Virgil Mobile Dashboard-->
+
+.frame {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	margin: 0px auto;
+	text-align:center;
+	color: #FFF;
+	font-family: 'Muli', sans serif;
+	font-weight: 300;
+	
+}
+
+.frame a {
+	text-decoration:none;
+	color: #FFF;	
+}
+
+h1 { 
+	visibility:hidden; 
+	margin-top: -2px;
+	font-size: 1px;
+}
+
+h2 { 
+font-family: 'Muli', sans serif;
+	font-weight: 200;
+	text-align: center;
+	margin-top: -18px;
+	margin-bottom: 1px;
+	font-size: 30px;
+}
+
+h3 {
+	font-family: 'Muli', sans serif;
+	color: #FFF;
+	font-size: 28px;
+
+}
+
+.medsprite {
+	position: relative;
+	margin-left: 50%;
+	margin-top: 10px;
+	left: -48px;
+	background: url('../images/sprite.png') no-repeat -2px 0;
+	width: 98px;
+	height: 98px;
+}
+
+.infosprite {
+	position: relative;
+	margin-left: 50%;
+	margin-top: 10px;
+	left: -48px;
+	background: url('../images/sprite.png') no-repeat -100px 0;
+	width: 98px;
+	height: 98px;
+}
+
+.phonesprite {
+	position: relative;
+	margin-left: 50%;
+	margin-top: 10px;
+	left: -48px;
+	background: url('../images/sprite.png') no-repeat -202px -102px;
+	width: 98px;
+	height: 98px;
+}
+
+.placesprite {
+	position: relative;
+	margin-left: 50%;
+	margin-top: 10px;
+	left: -48px;
+	background: url('../images/sprite.png') no-repeat 0px -101px;
+	width: 98px;
+	height: 98px;
+}
+
+.vidsprite {
+	position: relative;
+	margin-left: 50%;
+	margin-top: 10px;
+	left: -48px;
+	background: url('../images/sprite.png') no-repeat -200px 0px;
+	width: 98px;
+	height: 98px;
+}
+
+.homesprite {
+	position: relative;
+	margin-left: 50%;
+	margin-top: 10px;
+	left: -48px;
+	background: url('../images/sprite.png') no-repeat -97px -100px;
+	width: 98px;
+	height: 98px;
+}
+
+
+#box1 {
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 33%;	
+	background-color:#2faf2f;
+}
+
+
+#box1:hover {background-color: #000;}
+
+#box2 {
+	position: relative;
+	float: right;
+	width: 50%;
+	height: 33%;	
+	background-color:#1f0066;
+}
+
+#box2:hover {background-color: #000;}
+
+
+#box3 {
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 33%;		
+	background-color:#F90;
+}
+
+#box3:hover {background-color: #000;}
+
+#box4 {
+	position: relative;
+	float: right;
+	width: 50%;
+	height: 33%;		
+	background-color: #7186c3;
+}
+
+#box4:hover {background-color: #000;}
+
+
+#box5 {
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 34%;	
+	background-color:#ed1a4d;
+}
+
+#box5:hover {background-color: #000;}
+
+#box6 {
+	position: relative;
+	float: right;
+	width: 50%;
+	height: 34%;		
+	background-color: #8a26a2;
+}
+
+#box6:hover {background-color: #000;}
+
+

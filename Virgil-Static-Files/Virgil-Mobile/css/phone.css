@@ -1,0 +1,123 @@
+@charset "UTF-8";
+/* CSS Document */
+@charset "UTF-8";
+
+body {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.frame {
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+	font-family: 'Muli', sans serif;
+	font-weight: 200;
+	
+}
+
+.frame a {
+	text-decoration:none;
+	color: #FFF;	
+}
+
+h1 { 
+	visibility:hidden; 
+	margin-top: -2px;
+	font-size: 1px;
+}
+
+
+h3 {
+	position: relative;
+	font-size: 54px;
+	text-align: center;
+	margin-bottom: 30px;
+
+}
+
+#top-bar {
+	position: fixed;
+	display: inline-block;
+		width: 100%;
+		height: 120px;
+		background-color: #1f0066;
+		border: solid 3px #FFF;
+		z-index: 100;
+	}
+	
+	#top-bar h2 { 
+	position: fixed;
+	display:inline;
+	padding-left: 125px;
+	font-size: 42px;
+	line-height: 38px;
+	margin-top: -90px;
+	z-index: 20;
+	
+}
+
+		
+.phonebar {
+	width: 100%;
+	height: 120px;	;	
+	background-color:#1f0066;
+	display: inline-block;
+	border: solid 3px #FFF;
+	z-index: 10;
+}
+
+.phonebar h3 {
+	line-height: 40px;
+}
+
+.placebar:hover {background-color: #000;}
+
+#spacer {
+	width: 100%;
+	height: 120px;
+	background-color:transparent;
+	display: block;	
+}
+.iconframe {
+	position: relative;
+	height: 100px;
+	width: 100px;
+	margin: 10px 0px 0px 10px;
+}
+
+
+.phonesprite {
+	position: relative;
+	margin-left: 50%;
+	left: -48px;
+	background: url('../images/sprite.png') no-repeat -200px -102px;
+	width: 98px;
+	height: 98px;
+}
+
+.virgil-logo {
+	background: url('../images/sprite.png') no-repeat -300px -60px;
+	width: 99px;
+	height: 79px;
+
+}
+#footer { 
+	background: url('../images/footer-bgd.png');
+	display: block;
+	background-position: center;
+	background-attachment: fixed;
+	background-color: #FFF;
+	height: 200px;
+	width: 100%;
+}
+
+#footer .virgil-logo {
+	position: relative;
+	margin-left: 50%;
+	left: -36px;
+	top: 10px;
+
+
+}
