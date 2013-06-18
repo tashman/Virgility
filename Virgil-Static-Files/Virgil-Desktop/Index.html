@@ -3,19 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <title>Virgil: A Simple Mobile UI</title>
+
 <meta name="description" content="Virgil: A Simple Mobile UI. Virgil lets you simplify your smartphone to accessible core features.">
 <meta name="keywords" content="Virgil, Mobile, User Interface, UI, simple phone layout, special needs technology">
 <meta name="author" content="Dan Tashman">
 
  <link href='http://fonts.googleapis.com/css?family=Lato|Muli|Oxygen' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
 <link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">
   <link rel="stylesheet" href="css/desktop.css" type="text/css" media="screen">
   <link rel="stylesheet" href="css/header-footer.css" type="text/css" media="screen">
   
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
   <style>
   .master-footer { border: 1px solid  #2faf2f; }
   </style>
  
+
+
+
 </head>
 
 <body>
@@ -41,27 +49,66 @@
                         </a>
                         
               </div> <!--end Learn_More_box-->
-                    
+       
+
+      <script>
+          $('#myModal').modal(options)
+      </script>
+
+
                     <div id="Sign_Up_box">
-                    
-                    	<a href="#">
+
+                    <a href="#myModal" role="button" data-toggle="modal">
                         <div id="bluebox">
-                                <h2>Sign Up</h2>
-                            </div>
-                        </a>
+                            <h2>Sign Up</h2>
+                        </div>
+                    </a>
                         
               </div><!-- end Sign_Up_box-->
+
+
+  
+
+
+<!-- Modal -->
+
+
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h2 id="myModalLabel">Create a profile</h2>
+  </div> <!-- end modal header -->
+
+  <div class="modal-body">
+
+    <h5>Insert register form here</h5>
+
+  </div> <!-- end modal body -->
+
+<div class="modal-footer">
+
+     <button class="button">Save</button>
+
+     <a href="FAQ.html"><button class="button">FAQ's</button></a>
+
+    <button class="button" data-dismiss="modal" aria-hidden="true">Exit</button>
+   
+  </div><!-- end modal footer -->
+
+</div> <!-- end myModal -->
+
+
                     
       </div> <!--end buttonbox-->
             
-            <div id="loginbox">
+            <div class="loginbox">
             
                     <form>
-                    <input type="text" name="index-username" class="formbox" placeholder=" username">
+                    <input type="text" name="index-username" class="login-formbox" placeholder=" username">
                     </form>
                     
                     <form>
-                    <input type="password" name="index-password" class="formbox" placeholder=" password">
+                    <input type="password" name="index-password" class="login-formbox" placeholder=" password">
                     </form>
                     
               <input type="submit" class="button" name="index-login" value="Login">
