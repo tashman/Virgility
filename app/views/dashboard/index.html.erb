@@ -1,11 +1,11 @@
 
 <div class="master-header">
 
-        <%= link_to "home/index" %><img src="images/Virgil-Logo.png">
+        <%= link_to root_url %><img src="images/Virgil-Logo.png">
 
         <h2>Virgil: Dashboard</h2>
 
-        <h3>Welcome, username</h3>
+        <h3>Welcome, <%= current_user.first_name %></h3>
 
         <div class="bumper green-bumper"></div>
         

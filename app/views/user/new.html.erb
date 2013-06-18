@@ -1,0 +1,43 @@
+<h1>Virgil Sign Up</h1>
+
+<%= form_for :user do |f| %>
+
+	<% if @user.errors.any? %>
+		<div class = "error-message">
+			<h2>Profile cannot be completed</h2>
+			<ul>
+				<% for message in @user.errors.full_messages do %>
+					<li><%= message %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+
+	<p>
+		<%= f.label :first_name %><br />
+		<%= f.text_field :first_name %>
+	</p>
+
+	<p>
+		<%= f.label :email %><br />
+		<%= f.text_field :email %>
+	</p>
+
+	<p>
+		<%= f.label :password %><br />
+		<%= f.password_field :password %>
+	</p>
+
+	<p>
+		<%= f.label :password_confirmation %><br />
+		<%= f.password_field :password_confirmation %>
+	</p>
+
+	<p>
+		<div class="button">
+			<%= f.submit %>
+		</div>
+	</p>
+
+<%end%>

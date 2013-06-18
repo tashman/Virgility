@@ -4,9 +4,9 @@
 
         <%= link_to "home/index" %><img src="images/Virgil-Logo.png">
 
-        <h2>Virgil: Phone</h2>
+        <h2>Virgil: Basic info</h2>
 
-        <h3>Welcome, <%= first_name %></h3>
+        <h3>Welcome, Username</h3>
 
         <div class="bumper green-bumper"></div>
         
@@ -18,9 +18,11 @@
                   <div class="formbox-wrapper">
                             <h3>First Name</h3>
                                <form>
-                            <input type="text" name="firstname" class="formbox" placeholder=" required">
-                
-
+                            <input type="text" name="firstname" class="formbox">
+                  
+                             <%= form_for :basic_info do |f| %>
+                             <%= f.text_field :first_name, :placeholder => " required"  %>
+                               <% end %>
 
                           </form>
                              <br />
@@ -31,7 +33,12 @@
                    <div class="formbox-wrapper">
                              <h3>Last Name</h3>
                             <form>
-                            <input type="text" name="lastname" class="formbox" placeholder=" optional">
+                            <input type="text" name="lastname" class="formbox">    
+
+                               <%= form_for :basic_info do |f| %>
+                               <%= f.text_field :last_name, :placeholder => " optional" %>
+                                <% end %>
+
                             </form>
                             <br />
                     </div> <!--end formbox-wrapper-->
@@ -40,7 +47,12 @@
                    
                     <div class="formbox-wrapper">
                          <h3>Important Fact #1</h3>
-                        <input type="text" name="important1" class="formbox" placeholder=" important fact about you">
+                        <input type="text" name="important1" class="formbox">
+                          
+                           <%= form_for :basic_info do |f| %>
+                           <%= f.text_field :fact_one, :placeholder => " important fact about you"  %>
+                            <% end %>
+
                         </form>
                         <br />
                     </div> <!--end formbox-wrapper-->
@@ -49,45 +61,25 @@
                     
                       <div class="formbox-wrapper">
                          <h3>Important Fact  #2</h3>
-                        <input type="text" name="important2" class="formbox" placeholder=" secondary info">
+                        <input type="text" name="important2" class="formbox">
+
+                           <%= form_for :basic_info do |f| %>
+                           <%= f.text_field :fact_two, :placeholder => " secondary info "  %>
+                            <% end %>
+
                         </form>
                         <br />
                      </div> <!--end formbox-wrapper-->
                      
                       <div class="clear"></div> 
                       <br />
-                    
-                    <div class="formbox-wrapper">
-                         <h4>Emergency Contact Name</h4>
-                        <input type="text" name="Emergency-name" class="formbox" placeholder=" first or first/last name">
-                        </form>
-                         <br />
-                    </div> <!--end formbox-wrapper-->
-                      
-                          <div class="clear"></div> 
+                
                           
-                          
-                   <div class="formbox-wrapper">
-                         <h4>Emergency Contact Phone #</h4>
-                        <input type="text" name="Emergency-phone" class="formbox" placeholder=" 646-555-1212">
-                        </form>
-                         <br />
-                   </div> <!--end formbox-wrapper-->
-                   
-                     <div class="clear"></div>
-            
-                    
-                    <div class="formbox-wrapper">
-                          <h4>Emergency Contact Email </h4>
-                        <input type="text" name="Emergency-email" class="formbox" placeholder=" you@youremailprovider.com">
-                        </form>
-                        <br />
-                   </div> <!--end formbox-wrapper-->
-                   
+                
     </div> <!--end master formbox-->
     
                         <div class="clear"></div>
-                        
+                      
                         
                         <div id="imagearea">
                   <div class="button">
@@ -95,9 +87,29 @@
                    </div><!--end button-->
               
                   <h3>Click to upload an image of yourself (optional).</h3> 
+
                   <h4>Reccomended dimensions: 300x150. Accepted file types: .jpg, .png, .tif, .gif</h4>
+
       </div> <!--end imagearea-->
       
+
+             
+      <div class="buttonbox">
+         
+            <input type="submit" class="button" value="Edit">
+
+                 <%= form_for :basic_info do |f| %>
+                  <%= f.submit :edit %>
+                   <% end %>
+
+            <input type="submit" class="button" value="Save">
+
+                <%= form_for :basic_info do |f| %>
+                  <%= f.submit :save %>
+                    <% end %>
+
+      </div> <!--end buttonbox-->
+
 
   <div class="master-footer green-footer ">
 

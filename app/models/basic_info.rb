@@ -1,7 +1,10 @@
 class BasicInfo < ActiveRecord::Base
-  attr_accessible :emergency_contact, :emergency_email, :emergency_phone, :fact_one, :fact_two, :first_name, :last_name
+  attr_accessible :first_name, :emergency_contact, :emergency_email, :emergency_phone, :fact_one, :fact_two, :first_name, :last_name
 
-	validates :first_name, :presence => true
-    validates :fact_one, :presence => true,
+
+validates_presence_of :fact_one, :on => :create
+validates_presence_of :first_name, :on => :create
+
+
 
 end

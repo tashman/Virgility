@@ -1,7 +1,5 @@
 class Home < ActiveRecord::Base
-  attr_accessible :home_address, :home_url
+  attr_accessible :first_name, :home_address, :home_url
 
-	validates :home_address, :presence => true
-    validates :home_url, :presence => true
 
 end

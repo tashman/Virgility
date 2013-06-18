@@ -1,9 +1,12 @@
 class Video < ActiveRecord::Base
 	
-  attr_accessible :video_description, :video_url
+  attr_accessible :first_name, :video_description, :video_url
 
-    validates  :video_description, :presence => true,
- 	validates :video_url, :presence => true,
+
+ 	validates_presence_of :video_description, :on => :create
+ 	validates_presence_of :video_url, :on => :create
+
+
  
 
 

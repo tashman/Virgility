@@ -1,0 +1,35 @@
+
+  <%= form_for :medical do |f| %>
+
+  <%= f.label :primary, "Primary condition" %><br />
+  <%= f.text_field :primary, :placeholder => " ex. Down's Syndrome"  %><br />
+
+  <%= f.label :secondary, "Secondary condition (optional)" %><br />
+  <%= f.text_field :secondary, :placeholder => " ex. Hemophelia" %><br />
+
+  <%= f.label :emergency_contact, "Emergency Contact" %><br />
+  <%= f.text_field :emergency_contact, :placeholder => " ex. 'Mary', 'Mom', 'Dr. Jones'"  %><br />
+
+  <%= f.label :ec_number, "Emergency Contact Phone" %><br />
+  <%= f.telephone_field :ec_number, :placeholder => " ex. 212-555-1212"  %><br />
+
+  <%= f.label :doctor_name, "Doctor name (optional)" %><br />
+  <%= f.text_field :doctor_name, :placeholder => " ex. Dr. Smith"  %><br />
+
+  <%= f.label :doctor_phone, "Doctor phone number (optional)" %><br />
+  <%= f.telephone_field :doctor_phone, :placeholder => " ex. 212-555-1212"  %><br />
+
+  <%= f.label :hospital_name, "Hospital Name (optional)" %><br />
+  <%= f.text_field :hospital_name, :placeholder => " ex. Mt. Sinai Hospital"  %><br />
+ 
+  <%= f.label :hospital_number, "Hospital Phone # (optional)" %><br />
+  <%= f.telephone_field :hospital_number, :placeholder => " ex. (212) 241-6500"  %><br />
+
+  <%= f.label :edit, "Edit" %><br />
+  <%= f.submit :edit %><br />
+
+  <%= f.label "Save" %><br />
+  <%= f.submit %><br />
+
+  <% end %>
+

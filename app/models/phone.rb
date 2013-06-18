@@ -1,7 +1,9 @@
 class Phone < ActiveRecord::Base
- attr_accessible :phone_name, :phone_number
+ attr_accessible :first_name, :phone_name, :phone_number
 
- validates :phone_name, :presence => true,
- validates :phone_number, :presence => true,
- 
+
+ validates_presence_of :phone_name, :on => :create
+ validates_presence_of :phone_number, :on => :create
+
+
 end

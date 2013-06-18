@@ -15,16 +15,19 @@
  
                   <div class="formbox-wrapper">
                             <h3>Insert URL to YouTube/Vimeo link</h3>
-                               <form>
-                            <input type="text" name="url" class="formbox">
-                            <% form_for @user do |f| %>
-                             <%= f.text_field :video_description, :placeholder => " ex. http://www.youtube.com/U34fb^a23"  %>
+
+                            <form>
+                                <input type="text" name="url" class="formbox">
+
+                            <% form_for :video do |f| %>
+                             <%= f.text_field :video_url, :placeholder => " ex. http://www.youtube.com/U34fb^a23"  %>
                                <% end %>
+
                             </form>
                              <br />
+
                    </div> <!--end formbox-wrapper-->
 
-    
                     <div class="clear"></div>
                     
                    <div class="formbox-wrapper">
@@ -32,32 +35,30 @@
 
                          <form>
                             <input type="text" name="calltoaction" class="formbox">
-                            <% form_for @user do |f| %>
-                             <%= f.text_field :video_url, :placeholder => " ex. This video shows what to do if Billy has a seizure"%>
+
+                            <% form_for :video do |f| %>
+                             <%= f.text_field :video_description, :placeholder => " ex. This video shows what to do if Billy has a seizure"%>
                             <% end %>
+
                         </form>
                         <br />
 
                     </div> <!--end formbox-wrapper-->
                     
                  <div class="clear"></div>
-        
 
-             
              <div class="buttonbox">
-         
-            	<input type="submit" class="button" name="video-preview" value="Preview">
-                        <form>
-                            <% form_for @user do |f| %>
-                                <%= f.submit :preview %>
+          
+            	       <input type="submit" class="button" name="video-preview" value="Preview">
+                       
+                            <% form_for :video do |f| %>
+                            <%= f.submit :preview %>
                             <% end %>
                         </form>
 
-
                 <input type="submit" class="button" name="video-save" value="Save">
-                        <% form_for @user do |f| %>
-                              <%= f.label "Save" %>
-                              <%= f.save %>
+                        <% form_for :video do |f| %>
+                        <%= f.submit %>
                         <% end %>
          
    

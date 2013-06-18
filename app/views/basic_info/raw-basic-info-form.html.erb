@@ -1,0 +1,16 @@
+ <%= form_for :basic_info do |f| %>
+
+  <%= f.text_field :first_name, :placeholder => " required"  %><br />
+
+  <%= f.text_field :last_name, :placeholder => " optional" %><br />
+
+  <%= f.text_field :fact_one, :placeholder => " important fact about you"  %><br />
+
+  <%= f.text_field :fact_two, :placeholder => " secondary info "  %><br />
+
+  <%= f.submit :edit %><br />
+
+  <%= f.submit %><br />
+
+  <% end %>
+

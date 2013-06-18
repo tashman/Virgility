@@ -1,0 +1,14 @@
+ <%= form_for :phone do |f| %>
+
+  <%= f.text_field :phone_name, :placeholder => " i.e. 'Dentist', 'Work', 'Uncle Ben's"  %><br />
+
+  <%= f.text_field :phone_number, :placeholder => " ex. Hemophelia" %><br />
+
+  <%= f.label :edit, "Edit" %><br />
+  <%= f.submit :edit %><br />
+
+  <%= f.label "Save" %><br />
+  <%= f.submit %><br />
+
+  <% end %>
+

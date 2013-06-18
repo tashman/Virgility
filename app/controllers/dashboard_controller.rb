@@ -13,5 +13,6 @@ class DashboardController < ApplicationController
 	  end
 
 	  
-
+ 	def new
+	  end
 end

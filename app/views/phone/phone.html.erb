@@ -6,7 +6,7 @@
 
         <h2>Virgil: Phone</h2>
 
-        <h3>Welcome, <%= first_name %></h3>
+        <h3>Welcome, Username</h3>
 
         <div class="bumper phone-bumper"></div>
         
@@ -18,7 +18,12 @@
            <div class="formbox-wrapper">
                      <h3>Contact Name</h3>
                     <form>
-                    <input type="text" name="phone-name" class="formbox" placeholder=" i.e. 'Dentist', 'Work', 'Uncle Ben's">
+                    <input type="text" name="phone-name" class="formbox">
+
+                    <%= form_for :phone do |f| %>
+                      <%= f.text_field :phone_name, :placeholder => " i.e. 'Dentist', 'Work', 'Uncle Ben's"  %>
+                       <% end %>
+
                     </form>
                     <br />
             </div> <!--end formbox-wrapper-->
@@ -29,17 +34,30 @@
                     
             <div class="formbox-wrapper">
                      <h3>Contact Phone Number</h3>
-                    <input type="text" name="phone-number" class="formbox" placeholder=" ex. 212-799-2149">
+                    <input type="text" name="phone-number" class="formbox">
+
+                       <%= form_for :phone do |f| %>
+                        <%= f.text_field :phone_number, :placeholder => " ex. 212-799-2149" %>
+                         <% end %>
+
                     </form>
              </div> <!--end formbox-wrapper-->
 
                                  
                 <div class="formbox-wrapper buttonbox">
                 
-                            <input type="submit" class="button" name="phone-edit" value="Edit">
-            
-                            <input type="submit" class="button" name="phone-save" value="Save">
-                            
+                    <input type="submit" class="button" name="phone-edit" value="Edit">
+
+                       <%= form_for :phone do |f| %>
+                        <%= f.submit :edit %>
+                         <% end %>
+
+                    <input type="submit" class="button" name="phone-save" value="Save">
+                    
+                           <%= form_for :phone do |f| %>
+                            <%= f.submit :save %>
+                             <% end %>
+
                 </div> <!--end formbox-wrapper-->
          
 </div> <!--end master-formbox;-->

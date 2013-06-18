@@ -5,7 +5,7 @@
 
         <h2>Virgil: Phone</h2>
 
-        <h3>Welcome, <%= first_name %></h3>
+        <h3>Welcome, Username</h3>
 
         <div class="bumper places-bumper"></div>
         
@@ -20,9 +20,11 @@
 
                     <form>
                       <input type="text" name="place_name" class="formbox">
-                           <% form_for @user do |f| %>
+
+                           <% form_for :places do |f| %>
                            <%= f.text_field :place_address, :placeholder => " ex. '34 Valley Road, Walla Walla, WA 99362'" %>
                             <% end %>
+
                     </form>
 
                     <br />
@@ -36,9 +38,11 @@
 
                     <form>
                       <input type="text" name="place_address" class="formbox">
-                       <% form_for @user do |f| %>
+
+                       <% form_for :places do |f| %>
                         <%= f.text_field :place_name, :placeholder => " ex. 'Dentist', 'Work', 'Grandma's House'" %>
                         <% end %>
+
                     </form>
 
                     <br />
@@ -52,18 +56,23 @@
          
               <form>
                 <input type="submit" class="button" value="Preview">
-                   <% form_for @user do |f| %>
+
+                   <% form_for :places do |f| %>
                     <%= f.submit :preview %>
                     <% end %>
+
               </form>
 
                <form>
                       <input type="submit" class="button" value="Save">
-                      <% form_for @user do |f| %>
+
+                      <% form_for :places do |f| %>
                       <%= f.label "Save" %>
                       <%= f.save %>
                       <% end %> 
-                </form>
+
+              </form>
+
        </div> <!--end buttonbox;-->       
        
 

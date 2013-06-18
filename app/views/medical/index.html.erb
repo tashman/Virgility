@@ -1,33 +1,174 @@
 
-  <% form_for @user do |f| %>
+<div class="master-header">
 
-  <%= f.label :primary, "Primary condition" %>
-  <%= f.text_field :primary, :placeholder => " ex. Down's Syndrome"  %>
+        <%= link_to "home/index" %><img src="images/Virgil-Logo.png">
 
-  <%= f.label :secondary, "Secondary condition (optional)" %>
-  <%= f.text_field :secondary, :placeholder => " ex. Hemophelia" %>
+        <h2>Virgil: Medical</h2>
 
-  <%= f.label :emergency_contact, "Emergency Contact" %>
-  <%= f.text_field :emergency_contact, :placeholder => " ex. 'Mary', 'Mom', 'Dr. Jones'"  %>
+        <h3>Welcome, Username</h3>
 
-  <%= f.label :ec_number, "Emergency Contact Phone" %>
-  <%= f.telephone_field :ec_number, :placeholder => " ex. 212-555-1212"  %>
+        <div class="bumper red-bumper"></div>
+        
+</div> <!--end master header-->
 
-  <%= f.label :doctor_name, "Doctor name (optional)" %>
-  <%= f.text_field :doctor_name, :placeholder => " ex. Dr. Smith"  %>
 
-  <%= f.label :doctor_phone, "Doctor phone number (optional)" %>
-  <%= f.telephone_field :doctor_phone, :placeholder => " ex. 212-555-1212"  %>
+   <div class="master-formbox formbox-medical">
 
-  <%= f.label :hospital_name, "Hospital Name (optional)" %>
-  <%= f.text_field :hospital_name, :placeholder => " ex. Mt. Sinai Hospital"  %>
  
-  <%= f.label :hospital_number, "Hospital Phone # (optional)" %>
-  <%= f.telephone_field :hospital_number, :placeholder => " ex. (212) 241-6500"  %>
+                  <div class="formbox-wrapper">
+                            <h3>Primary Condition</h3>
+                               <form>
+                            <input type="text" name="primary" class="formbox">
+                          
+                            <% form_for :medical do |f| %>
+                               <%= f.text_field :primary, :placeholder => " ex. Down's Syndrome"%>
+                            <% end %>
 
-  <%= f.label :edit, "Edit" %>
-  <%= f.submit :edit %>
+                             </form>
+                             <br />
+                   </div> <!--end formbox-wrapper-->
 
-  <%= f.label "Save" %>
-  <%= f.save %>
 
+                   
+                    <div class="clear"></div>
+                    
+                   <div class="formbox-wrapper">
+
+                             <h3>Secondary Condition (optional)</h3>
+                            <form>
+                            <input type="text" name="secondary" class="formbox">
+                               
+                              <% form_for :medical do |f| %>
+                                <%= f.text_field :secondary, :placeholder => " ex. Hemophelia" %>
+                              <% end %>
+
+                                 </form>
+                            <br />
+                    </div> <!--end formbox-wrapper-->
+                    
+                 <div class="clear"></div>
+                        
+                <div class="formbox-wrapper">
+  
+
+                         <h3>Emergency Contact </h3>
+
+                        <input type="text" name="ec_name" class="formbox">
+
+                         <% form_for :medical do |f| %>
+                            <%= f.label :emergency_contact, "Emergency Contact" %>
+                            <%= f.text_field :emergency_contact, :placeholder => " ex. 'Mary', 'Mom', 'Dr. Jones'"  %>
+                        <% end %>
+
+                         </form>
+
+
+                         <h3>Emergency Contact #</h3>
+                        <input type="text" name="ec_number" class="formbox">
+                        
+                       <% form_for :medical do |f| %>
+                         <%= f.label :ec_number, "Emergency Contact Phone" %>
+                          <%= f.telephone_field :ec_number, :placeholder => " ex. 212-555-1212"  %>
+                        <% end %>
+
+                        </form>
+                        <br />
+
+                 </div> <!--end formbox-wrapper-->
+                 
+
+
+                  <div class="clear"></div>
+                         
+                  <div class="formbox-wrapper">
+
+                        <h3>Doctor Name (optional)</h3>
+                        <input type="text" name="doctor-name" class="formbox">
+                       
+                        <% form_for :medical do |f| %>
+                           <%= f.label :doctor_name, "Doctor name (optional)" %>
+                            <%= f.text_field :doctor_name, :placeholder => " ex. Dr. Smith"  %>
+                        <% end %>
+
+                         </form>
+
+
+
+                          <h3>Doctor Phone (optional)</h3>
+                        <input type="text" name="doctor-number" class="formbox">
+                         <% form_for :medical do |f| %>
+                            <%= f.label :doctor_name, "Doctor name (optional)" %>
+                            <%= f.text_field :doctor_name, :placeholder => " ex. Dr. Smith"  %>
+                        <% end %>
+                        </form>
+                        <br />
+
+                  </div> <!--end formbox-wrapper-->
+                  
+                   <div class="clear"></div>
+
+                     
+                   <div class="formbox-wrapper">
+
+
+                        <h3>Hospital Name (optional)</h3>
+                       
+                        <input type="text" name="hospital-name" class="formbox">
+
+                         <% form_for :medical do |f| %>
+                          <%= f.label :hospital_name, "Hospital Name (optional)" %>
+                          <%= f.text_field :hospital_name, :placeholder => " ex. Mt. Sinai Hospital" %>
+                        <% end %>
+
+                        </form>
+
+                              <h3>Hospital Phone (optional)</h3>
+                        <input type="text" name="hospital-number" class="formbox">
+                       
+                        <% form_for :medical do |f| %>
+                          <%= f.label :hospital_number, "Hospital Phone # (optional)" %>
+                          <%= f.telephone_field :hospital_number, :placeholder => " ex. (212) 241-6500" %>
+                        <% end %>
+
+                        </form>
+                        <br />
+                   </div> <!--end formbox-wrapper-->
+                   
+                    <div class="clear"></div>
+                        
+
+          
+             <div class="checkbox-holder">
+                        <input type="checkbox" id="medical-image" class="regular-checkbox big-checkbox" /><label for="checkbox-2-1"></label>
+            			<h4>Check here to display your <a href="Basic-Info-Form.html">Basic Info</a> image</h4>
+		        </div> <!--end checkbox holder-->
+                             
+
+                          
+                 <div class="buttonbox">
+
+                 <input type="submit" class="button" name="medical-edit" value="Edit">
+                 <% form_for :medical do |f| %>         
+                  <%= f.submit :edit %>
+                  <% end %>
+
+                  </div> <!--end buttonbox-->
+                       
+               <div class="buttonbox">
+
+                     <input type="submit" class="button" name="medical-submit" value="Save"> 
+                    <% form_for :medical do |f| %>
+                    <%= f.submit %>
+                    <% end %>
+
+                </div> <!--end buttonbox-->
+                  
+
+  <div class="master-footer red-footer ">
+
+         <%= render "partials/footer" %>
+
+  </div> 
+
+                        
+ 

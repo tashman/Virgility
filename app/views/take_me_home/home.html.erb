@@ -4,9 +4,9 @@
 
         <%= link_to "home/index" %><img src="images/Virgil-Logo.png">
 
-        <h2>Virgil: Phone</h2>
+        <h2>Virgil: Take Me Home</h2>
 
-        <h3>Welcome, <%= first_name %></h3>
+        <h3>Welcome, Username %></h3>
 
         <div class="bumper home-bumper"></div>
         
@@ -19,7 +19,7 @@
                      <h3>Enter your home address</h3>
                     <input type="text" name="home-address" class="formbox">
 
-                      <% form_for @user do |f| %>
+                      <% form_for :take_me_home do |f| %>
                               <%= f.label :home_address %>
                               <%= f.text_field :home_url, :placeholder => " ex. '34 Valley Road, Walla Walla, WA 99632'" %>
                      <% end %>
