@@ -1,34 +1,10 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Virgil en Espanol</title>
-<meta name="description" content="Virgil: A Simple Mobile UI. Conozca más acerca de lo que Virgil puede hacer por usted.">
-<meta name="keywords" content="Virgil, Mobile, User Interface, UI, simple phone layout, special needs technology, spanish, espanol, multi-language, languages">
-<meta name="author" content="Dan Tashman">
-
- <link href='http://fonts.googleapis.com/css?family=Lato|Muli|Oxygen' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">
- <link rel="stylesheet" href="css/espanol.css" type="text/css" media="screen">
- <link rel="stylesheet" href="css/header-footer.css" type="text/css" media="screen">
-
-<style>
-.master-footer { margin-top: 200px; }
-#hero-box {margin-top:50px;}
-.bumper {background-color: #2faf2f; top: 17px;}
-</style>
-
-</head>
-
-<body>
-
-		<h1>Virgil: A Simple Mobile UI</h1>
+	<h1>Virgil: A Simple Mobile UI</h1>
 
             <div class="master-header">
                   <a href="Index.html"><img src="images/Virgil-Logo.png"></a>
                 <h2>Virgil en Espanol</h2>
-                <h3><a href="index.html">Casa</a></h3>
-                <div class="bumper"></div>
+                <h3><%= link_to "Casa", "home/index" %></h3>
+                <div class="bumper green-bumper"></div>
         </div> <!--end master header-->
 
 <div id="container">
@@ -56,15 +32,8 @@
 
 </div> <!--end container-->
 
-    <div id="footer">
-        
-    <div class="master-footer">
-        <ul>
-                <li><h5>©2013<a href="http://www.about.me/dantashman" target="_blank"> Dan Tashman</a></h5></li>
-                <li><a href="index.html"><img src="images/house.png" width="32" height="32" alt="home-icon" /></a></li>
-               <li><h6><a href="FAQ.html">FAQ's</a></h6></li>        
-         </ul>
-    </div> <!--end master footer-->
+ <div class="master-footer green-footer">
 
-</body>
-</html>
+   <%= render "partials/footer" %>
+   
+</div> 

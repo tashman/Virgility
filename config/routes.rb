@@ -1,15 +1,23 @@
 VirgilRuby::Application.routes.draw do
 
+
   get "home/index"
+
   get "dashboard" => "dashboard#index"
+
   get "basic_info" => "basic_info#index"
   get "take_me_home" => "take_me_home#index"
   get "video" => "video#index"
   get "places" => "places#index"
   get "phone" => "phone#index"
   get "medical" => "medical#index"
-  get "phone_mobile/phone_number"
-  get "phone_mobile/phone_url"
+
+  get "faqs" => "static_pages#faqs"
+  get "espanol" => "static_pages#espanol"
+  get "learnmore" => "static_pages#learnmore"
+
+
+
 
 
 

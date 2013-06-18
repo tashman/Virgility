@@ -1,8 +1,7 @@
-@charset "UTF-8";
-/* CSS Document */
+
 
 @charset "UTF-8";
-/* CSS Document for Learn More: Virgil*/
+/* CSS Document for espanol: Virgil*/
 
 body  {
 	background-color: #FFF;
@@ -21,10 +20,11 @@ h1 {
 }
 
 h2 {
-	font-family: 'Varela Round', sans-serif;
+	font-family: 'Muli', sans-serif;
 	font-size:40px;
 	line-height: 40px;
 	font-weight:300;
+	text-align: left;
 }
 
 h3 {
@@ -54,7 +54,7 @@ h3 {
 	position: relative;
 	width: 90%;
 	padding-left: 50px;	
-	top: 60px;
+	top: 1px;
 }
 
 
@@ -64,7 +64,7 @@ h3 {
 	 position: relative;
 	 width: 90%;
 	margin-left: 75px;
-	top: 60px;
+	top: 10px;
 	 
  }
   #content-box h2 {

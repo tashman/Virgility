@@ -1,36 +1,13 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Virgil: Learn More</title>
-<meta name="description" content="Virgil: A Simple Mobile UI. Learn More about what Virgil can do for you.">
-<meta name="keywords" content="Virgil, Mobile, User Interface, UI, simple phone layout, special needs technology">
-<meta name="author" content="Dan Tashman">
-
- <link href='http://fonts.googleapis.com/css?family=Lato|Muli|Oxygen' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">
- <link rel="stylesheet" href="css/Learn-More.css" type="text/css" media="screen">
- <link rel="stylesheet" href="css/header-footer.css" type="text/css" media="screen">
-
-<style>
-.master-footer { 
-	margin-top: 100px; 
-	border: 1px solid #2faf2f;
-	}
-.bumper {background-color: #2faf2f; top: 17px;}
-
-</style>
-
-</head>
-
-<body>
 <h1>Virgil: A Simple Mobile UI</h1>
 
     <div class="master-header">
+      
         <a href="Index.html"><img src="images/Virgil-Logo.png"></a>
         <h2>Virgil: Learn More</h2>
-        <h3><a href="Register.html">Create an account</a></h3>
-        <div class="bumper"></div>
+
+        <h3><%= link_to "Create an account", "basic_info" %></h3>
+
+        <div class="bumper green-bumper"></div>
 </div> <!--end master header-->
 
 <div id="container">
@@ -59,18 +36,9 @@
 
 </div> <!--end container-->
 
-<div id="footer">
-    
-<div class="master-footer">
-	<ul>
-            <li><h5>©2013<a href="http://www.about.me/dantashman" target="_blank"> Dan Tashman</a></h5></li>
-            <li><a href="index.html"><img src="images/house.png" width="32" height="32" alt="home-icon" /></a></li>
-           <li><h6><a href="FAQ.html">FAQ's</a></h6></li>
-           <li><h6><a href="espanol.html">Virgil en Espanol</h6></a></li>
-         
-     </ul>
-</div> 
-<!--end master footer-->
 
-</body>
-</html>
+<div class="master-footer green-footer">
+
+   <%= render "partials/footer" %>
+   
+</div> 
