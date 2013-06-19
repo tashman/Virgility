@@ -25,6 +25,7 @@ h2 {
 	font-size: 36pt;
 	line-height: 36px;
 	font-weight: 300;
+
 }
 
 h3 {
@@ -47,8 +48,8 @@ h4 {
 
 #titlebox {
 	position: relative;
-	margin-bottom: -30px;
-	margin-top: -30px;
+	margin-bottom: -20px;
+	margin-top: -20px;
 }
 
 #header {
@@ -102,10 +103,12 @@ h4 {
 
 }
 
-#loginbox {
+.loginbox {
+	position: relative;
+	display: inline-block;
 	width: 800px;
-	height: 100px;	
 	margin: 20px auto;
+	left: -15px;
 }
 
 #redbox {
@@ -146,21 +149,33 @@ h4 {
 
 #bluebox:hover {
 	background-color: #000;
+	text-decoration: none;
 }
 
 
 
- .formbox {
+ .login-formbox {
+ 
 	 float: left;
-	 font-family: 'Muli', sans serif;
+	 font-family: 'Muli', serif;
 	 display: inline-block;
 	 width: 300px;
 	 height: 50px;
 	 color: #333;
-	 font-size: 20pt;
-	 font-align: left;
+	 font-size: 23px;
+	 text-indent: 10px;
 	 margin: 10px;
 	 border: 4px solid #2faf2f;
+ }
+
+ .usernnamebox {
+ 	position: relative;
+ 	float: left;
+ }
+
+ .passwordbox { 
+ 	position: relative;
+ 	float: right;
  }
  
  .button {
@@ -173,6 +188,7 @@ h4 {
 	color: #FFF;
 	text-align: center;
 	margin-top: 10px;
+	margin-left: 10px;
 	-webkit-transition: all .5s linear 0s;
 	-moz-transition: all .5s linear 0s;
 	-ms-transition: all .5s linear 0s;
