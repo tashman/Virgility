@@ -20062,3 +20062,14 @@ Migrating to CreateVideoMobiles (20130615003113)
 Migrating to CreateUsers (20130618142922)
   [1m[35m (0.5ms)[0m  select sqlite_version(*)
   [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-19 10:41:32 -0400
+Connecting to database specified by database.yml
+
+ActionController::RoutingError (undefined method `belongs_to' for MedicalController:Class):
+  app/controllers/medical_controller.rb:3:in `<class:MedicalController>'
+  app/controllers/medical_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (10.5ms)
