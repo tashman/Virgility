@@ -1,3 +1,8 @@
+
+  <%= stylesheet_link_tag 'bootstrap' %>
+  <%= stylesheet_link_tag 'desktop' %>
+ 
+
   <div id="container">
     
             <div id="titlebox">
@@ -50,34 +55,6 @@
 
       <div class="master-formbox formbox-basic">
  
-                  <div class="formbox-wrapper">
-                            <h3>First Name</h3>
-                               <form>
-                            <input type="text" name="firstname" class="formbox">
-                  
-                             <%= form_for :user do |f| %>
-                             <%= f.text_field :first_name, :placeholder => " required"  %>
-                               <% end %>
-
-                          </form>
-                             <br />
-                   </div> <!--end formbox-wrapper-->
-                   
-                    <div class="clear"></div>
-                    
-                   <div class="formbox-wrapper">
-                             <h3>Last Name</h3>
-                            <form>
-                            <input type="text" name="lastname" class="formbox">    
-
-                               <%= form_for :user do |f| %>
-                               <%= f.text_field :last_name, :placeholder => " optional" %>
-                                <% end %>
-
-                            </form>
-                            <br />
-                    </div> <!--end formbox-wrapper-->
-                    <div class="master-formbox formbox-basic">
  
                   <div class="formbox-wrapper">
                             <h3>Email address</h3>
@@ -140,7 +117,7 @@
   </div><!-- end modal footer -->
 
 </div> <!-- end myModal -->
-
+</div>
                     
       </div> <!--end buttonbox-->
             
