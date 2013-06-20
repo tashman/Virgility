@@ -1,18 +1,17 @@
 class DashboardController < ApplicationController
+layout 'assets/stylesheets/dashboard.css'
+	# def mobile_toggle
+	# 	if phone_button = on, 
+	# 		redirect_to "phone_mobile/index"
+	# 	else
+	# 		redirect_to "phone_mobile/off"
+	# 	end
+	# end
 
-	  attr_accessible :basic_info, :home, :medical, :phone, :places, :video
-
-
-	  def initialize
-	  	@basic_info = basic_info
-	  	@home = home
-	  	@medical = medical
-	  	@places = places
-	  	@phone = phone
-	  	@video = video
-	  end
-
+	# execute for all 6
 	  
  	def new
 	  end
+
+
 end

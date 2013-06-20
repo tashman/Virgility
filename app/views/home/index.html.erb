@@ -55,7 +55,7 @@
                                <form>
                             <input type="text" name="firstname" class="formbox">
                   
-                             <%= form_for @user do |f| %>
+                             <%= form_for :user do |f| %>
                              <%= f.text_field :first_name, :placeholder => " required"  %>
                                <% end %>
 
@@ -70,7 +70,7 @@
                             <form>
                             <input type="text" name="lastname" class="formbox">    
 
-                               <%= form_for @user do |f| %>
+                               <%= form_for :user do |f| %>
                                <%= f.text_field :last_name, :placeholder => " optional" %>
                                 <% end %>
 
@@ -85,7 +85,7 @@
                            <form>
                             <input type="text" name="firstname" class="formbox">
                   
-                             <%= form_for @user do |f| %>
+                             <%= form_for :user do |f| %>
                              <%= f.text_field :email, :placeholder => " required"  %>
                                <% end %>
 
@@ -100,7 +100,7 @@
                             <form>
                             <input type="text" name="lastname" class="formbox">    
 
-                               <%= form_for @user do |f| %>
+                               <%= form_for :user do |f| %>
                                <%= f.text_field :password, :placeholder => " must be at least 6 characters" %>
                                 <% end %>
 
@@ -113,7 +113,7 @@
                         <form>
                           <input type="text" name="lastname" class="formbox">    
 
-                            <%= form_for @user do |f| %>
+                            <%= form_for :user do |f| %>
                               <%= f.text_field :password_confirmation, :placeholder => "repeat your password" %>
                               <% end %>
 
@@ -127,19 +127,19 @@
 
                      <button class="button">Save
 
-                      <%= form_for @user do |f| %>
+                      <%= form_for :user do |f| %>
                         <%= f.submit %><br />
                           <% end %>
 
                           </button>
 
-                     <a href="FAQ.html"><button class="button">FAQ's</button></a>
+                     <h5><button class="button"><%= link_to "FAQ's", "faqs"%></button></h5>
+
 
    
   </div><!-- end modal footer -->
 
 </div> <!-- end myModal -->
-
 
                     
       </div> <!--end buttonbox-->

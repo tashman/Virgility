@@ -2,7 +2,7 @@
 /* CSS stylesheet for Virgil by Dan Tashman */
 
 body { 
-	background: url('../images/footer-bgd.png');
+	background: url('../assets/images/footer-bgd.png');
 	display: block;
 	background-position: center;
 	background-attachment: fixed;
