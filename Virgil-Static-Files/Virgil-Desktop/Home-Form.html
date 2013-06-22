@@ -10,64 +10,48 @@
 
  <link href='http://fonts.googleapis.com/css?family=Lato|Muli|Oxygen' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">
-  <link rel="stylesheet" href="css/home-form.css" type="text/css" media="screen">
- <link rel="stylesheet" href="css/header-footer.css" type="text/css" media="screen">
 
- <style>
- .bumper {background-color: #7186c3; top: 22px;}
- .master-footer {border: 1px solid #7186c3;}
- .container {margin: 110px auto;}
- </style>
- 
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+
 </head>
 
 <body>
 
-  
-          <!-- -------------------HEADER------------------->
-          
-              <div class="master-header">
+
+              <div class="master-header TMH-header">
                   <a href="Index.html"><img src="images/Virgil-Logo.png"></a> 
         <h2>Virgil: Take Me Home</h2>
         <h3>Welcome, Username</h3>
-        <div class="bumper"></div>
+        <div class="bumper TMH-bumper"></div>
 </div> <!--end master header-->
-          
-                    <!-- -------------------FORMBOX------------------->
- <div class="container">
+
+
+ <div class="TMH-container">
      
-            <div class="formbox-wrapper">
+            <div class="TMH-formbox-wrapper">
                      <h3>Enter your home address</h3>
-                    <input type="text" name="home-address" class="formbox" placeholder=" ex. '34 Valley Road, Walla Walla, WA 99632'">
+                    <input type="text" name="home-address" class="TMH-formbox" placeholder=" ex. '34 Valley Road, Walla Walla, WA 99632'">
                     </form>
                     <br />
              </div><!-- end "formbox-wrapper-->
-          
-                 
-  
-      <!-- -------------------buttons------------------->
+ 
+         <div class="TMH-buttonbox">
          
-         <div class="buttonbox">
-         
-            	<input type="submit" class="button" value="Preview">
+            	<input type="submit" class="TMH-button" value="Preview">
 
-              				<input type="submit" class="button" value="Save">
+              				<input type="submit" class="TMH-button" value="Save">
     
-         <!--end buttonbox-->
-         
-             <!-- -------------------PREVIEW AREA------------------->
-     
+ 
+
              
-             <div id="previewbox">
+             <div id="TMH-previewbox">
              <iframe width="584" height="284" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=171+west+street+white+plains+ny&amp;aq=&amp;sll=42.746632,-75.770041&amp;sspn=6.018244,9.063721&amp;ie=UTF8&amp;hq=&amp;hnear=171+West+St,+White+Plains,+Westchester,+New+York+10605&amp;t=m&amp;ll=40.991755,-73.74238&amp;spn=0.011921,0.050039&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
              </div> <!--end previewbox-->
              
          
-         
-         <!-----------------------------Directions------------------------------>
+
  
- 
-    <div class="directionsbox">
+    <div class="TMH-directionsbox">
             <h3>Directions</h3>
             <h4>"Take Me Home' will immediately produce a Google Map from your current location, to the one entered in the form above.</h4>
             <h4>By entering your home address, you will always have the ability to find your way home with a single button push.</h4>
@@ -79,10 +63,8 @@
          </div>
          </div>
 
-          <!-- -------------------FOOTER------------------->
 
-
-         <div class="master-footer">
+         <div class="master-footer TMH-footer">
 	<ul>
             <li><h5>©2013<a href="http://www.about.me/dantashman" target="_blank"> Dan Tashman</a></h5></li>
             <li><a href="index.html"><img src="images/house.png" width="32" height="32" alt="home-icon" /></a></li>
