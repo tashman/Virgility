@@ -1,0 +1,24 @@
+
+<%= form_for(@character) do |f| %>
+
+<div class="places-container">
+
+              <h3>Place Name</h3>
+              <%= f.text_field :name, :class =>"places-formbox-wrapper", :placeholder => " ex. 'Dentist', 'Work', 'Grandma's House'" %>
+  
+              <h3>Place Address</h3>
+               <%= f.text_field :address, :class =>"places-formbox-wrapper", :placeholder => " 34 Valley Road Walla Walla, WA 99362" %>
+
+          <div class="places_buttonbox">
+
+              <%= f.submit "Save place", :class => "places_button" %>
+
+              <%= link_to 'Back to Places', characters_path, :class => "places_button2" %>
+
+          </div> <!-- end places-buttonbox -->
+   
+</div> <!-- end places container -->
+
+<% end %>
+
+

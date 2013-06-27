@@ -1,0 +1,23 @@
+<%= render 'places-header' %>
+
+<h4 id="notice"><%= notice %></h4>
+
+	<div class="white">
+		<div class="container">
+
+				<h2>
+				 <%= @character.name %>
+				</h2>
+				 <h2>
+				 <%= @character.address %>
+				</h2>
+
+			<%= link_to 'Edit this Place', edit_character_path(@character), :class => "places_button" %>
+			<%= link_to 'Confirm Place', characters_path, :class => "places_button" %>
+		
+		</div><!-- END CONTAINER -->
+
+	</DIV><!--  END WHITE -->
+
+
+<%= render 'places-footer' %>

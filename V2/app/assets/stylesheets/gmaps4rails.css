@@ -1,0 +1,15 @@
+.map_container {top: 40px;}
+
+.gmaps4rails_map {
+  width: 640px;
+  height: 320px;
+    margin: 0px auto;
+  border: 8px solid #F90;
+}
+
+.bing_map {
+   left: 10;
+   width: 300px;
+   height: 200px;
+   border: #F90 4px solid;
+}
