@@ -1,9 +1,32 @@
 class Places < ActiveRecord::Base
 
-  attr_accessible :email, :place_address, :place_name, :place_url
+attr_accessible :address, :gmaps, :latitude, :longitude, :name, :email, :place_url
   
-validates_presence_of :place_address, :on => :create
-validates_presence_of :place_name, :on => :create
-validates_presence_of :place_url, :on => :create
+validates_presence_of :address, :on => :create
+validates_presence_of :name, :on => :create
+
+
+acts_as_gmappable
+
+
+  def gmaps4rails_address
+    address
+  end
+
+  def gmaps4rails_infowindow 
+    "<h1>#{name} #{address}</h1>"
+  end
+
+  def gmaps4rails_marker_picture
+	{
+		"picture" => "/assets/placemarker.png",
+		"width" => 60,
+		"height" => 60 
+	}
+	end
+
+
 
 end
+
+

@@ -1,180 +1,31 @@
-  <%= stylesheet_link_tag 'places-form' %>
 
-<div class="master-header">
+<%= render 'places-header' %>
 
-        <%= link_to "home/index" %><img src="images/Virgil-Logo.png">
+<div class="places-headroom"></div>
 
-        <h2>Virgil: Phone</h2>
+<div class="places-container">
 
-        <h3>Welcome, Username</h3>
+  <%= link_to 'Create New Place', new_place_path, :class => "create_places_button" %>
 
-        <div class="bumper places-bumper"></div>
-        
-</div> <!--end master header--> 
+  <%= gmaps4rails(@json) %>
 
- <div id="master-formbox">
- 
- 
-           <div class="formbox-wrapper">
+  <% @places.each do |places| %>
 
-                     <h3>Place Name</h3>
+  <div class="places-preview-list-box">
+        <div class="placelist" >
+          <h3><%= place.name %></h3>
+            <div class="places-edit-checkbox">
+              <%= link_to '', edit_places_path(places), :class => "places-edit-sprite" %>
+            </div><!--end  checkbox-->
+        <div class="places-delete-checkbox">
+            <%= link_to '', places, :class => "places-delete-sprite", method: :delete, data: { confirm: 'Are you sure you want to delete this place?' } %>
+        </div><!--end edit checkbox-->
+    </div> <!-- end placelist -->
 
-                    <form>
-                      <input type="text" name="place_name" class="formbox">
+ </div> <!-- end places previewlistbox -->
 
-                           <% form_for :places do |f| %>
-                           <%= f.text_field :place_address, :placeholder => " ex. '34 Valley Road, Walla Walla, WA 99362'" %>
-                            <% end %>
+</div>
 
-                    </form>
+<% end %>
 
-                    <br />
-            </div> <!--end formbox-wrapper-->
-            
-             <div class="clear"></div>
-                    
-            <div class="formbox-wrapper">
-
-                   <h3>Address</h3>
-
-                    <form>
-                      <input type="text" name="place_address" class="formbox">
-
-                       <% form_for :places do |f| %>
-                        <%= f.text_field :place_name, :placeholder => " ex. 'Dentist', 'Work', 'Grandma's House'" %>
-                        <% end %>
-
-                    </form>
-
-                    <br />
-
-             </div> <!--end formbox-wrapper-->
-             
-              <div class="clear"></div>
-                    
-
-         <div class="buttonbox">
-         
-              <form>
-                <input type="submit" class="button" value="Preview">
-
-                   <% form_for :places do |f| %>
-                    <%= f.submit :preview %>
-                    <% end %>
-
-              </form>
-
-               <form>
-                      <input type="submit" class="button" value="Save">
-
-                      <% form_for :places do |f| %>
-                      <%= f.submit %>
-                      <% end %> 
-
-              </form>
-
-       </div> <!--end buttonbox;-->       
-       
-
-    
-    <div class="preview-list-box">
-    
- 
-             
-           <div class="place-preview-box ">
-          
-                     <div id="previewbox">
-                     <iframe width="484" height="444" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=171+west+street+white+plains+ny&amp;aq=&amp;sll=42.746632,-75.770041&amp;sspn=6.018244,9.063721&amp;ie=UTF8&amp;hq=&amp;hnear=171+West+St,+White+Plains,+Westchester,+New+York+10605&amp;t=m&amp;ll=40.991755,-73.74238&amp;spn=0.011921,0.050039&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe> 
-                    </div> <!--end previewbox-->
-                    
-            </div> <!--end  place-preview-box   --> 
-    
-
- 
-           <div class="list-preview-box">
-           
-                 <div class="placelist" id="place1" >
-                        <h3>Place #1</h3>
-                          <div class="edit-checkbox">
-                             <a href="http://www.google.com"><div class="place-edit-sprite" id="place1-edit"></div></a>
-                            </div><!--end  checkbox-->
-                            
-                           <div class="delete-checkbox">
-                           <a href="#"><div class="place-delete-sprite" id="place2-delete"></div></a>
-                        </div><!--end edit checkbox-->
-                 </div> <!--end placelist-->
-                 
-                 <div class="placelist" id="place2"><h3>Place #2</h3>
-                      <div class="edit-checkbox">
-                             <a href="http://www.google.com"><div class="place-edit-sprite" id="place1-edit"></div></a>
-                            </div><!--end  checkbox-->
-                            
-                           <div class="delete-checkbox">
-                           <a href="#"><div class="place-delete-sprite" id="place2-delete"></div></a>
-                        </div><!--end edit checkbox-->
-                  </div> <!--end placelist-->
-                 
-           
-                 <div class="placelist" id="place3"><h3>Place #3</h3>
-                       <div class="edit-checkbox">
-                             <a href="http://www.google.com"><div class="place-edit-sprite" id="place3-edit"></div></a>
-                            </div><!--end  checkbox-->
-                            
-                           <div class="delete-checkbox">
-                           <a href="#"><div class="place-delete-sprite" id="place3-delete"></div></a>
-                        </div><!--end edit checkbox-->
-               </div> <!--end placelist-->
-     
-                 <div class="placelist" id="place4"><h3>Place #4</h3>
-                 
-                       <div class="edit-checkbox">
-                             <a href="http://www.google.com"><div class="place-edit-sprite" id="place4-edit"></div></a>
-                            </div><!--end  checkbox-->
-                            
-                           <div class="delete-checkbox">
-                           <a href="#"><div class="place-delete-sprite" id="place4-delete"></div></a>
-                        </div><!--end edit checkbox-->
-               </div> <!--end placelist-->
-               
-                        
-                 <div class="placelist" id="place5"><h3>Place #5</h3>
-                         <div class="edit-checkbox">
-                             <a href="http://www.google.com"><div class="place-edit-sprite" id="place5-edit"></div></a>
-                            </div><!--end  checkbox-->
-                            
-                           <div class="delete-checkbox">
-                           <a href="#"><div class="place-delete-sprite" id="place5-delete"></div></a>
-                        </div><!--end edit checkbox-->
-                 </div> <!--end placelist-->
-                 
-                 
-                 <div class="placelist" id="place6"><h3>Place #6</h3>
-                    <div class="edit-checkbox">
-                             <a href="http://www.google.com"><div class="place-edit-sprite" id="place6-edit"></div></a>
-                            </div><!--end  checkbox-->
-                            
-                           <div class="delete-checkbox">
-                           <a href="#"><div class="place-delete-sprite" id="place6-delete"></div></a>
-                        </div><!--end edit checkbox-->
-                  </div> <!--end placelist-->      
-                        
-                 
-         </div> <!--end list-preview-box --> 
-         
- </div> <!--end preview-list-box-->
- 
-
-          
-         </div>
-         </div>
-         </div>
-         </div>
-         </div>
-
-               
-<div class="master-footer places-footer">
-
-   <%= render "partials/footer" %>
-   
-</div> 
-<!--end master footer-->
+<%= render 'places-footer' %>

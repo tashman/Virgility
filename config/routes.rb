@@ -6,21 +6,27 @@ VirgilRuby::Application.routes.draw do
   get "home/index"
 
   get "dashboard" => "dashboard#index"
+  get "faqs" => "static_pages#faqs"
+  get "espanol" => "static_pages#espanol"
+  get "learnmore" => "static_pages#learnmore"
 
-  get "basic_info" => "basic_info#index"
-  get "take_me_home" => "take_me_home#index"
-  get "video" => "video#index"
+resources :places
+
   get "places" => "places#index"
-  get "phone" => "phone#index"
-  get "medical" => "medical#index"
+      get "places/new"
+      get "places/edit"
+      get "placelist" => "places/show"
+      get "places/mobile"
 
   get "faqs" => "static_pages#faqs"
   get "espanol" => "static_pages#espanol"
   get "learnmore" => "static_pages#learnmore"
 
-
-
-
+  get "phone" => "phone#index"
+  get "medical" => "medical#index"
+  get "basic_info" => "basic_info#index"
+  get "take_me_home" => "take_me_home#index"
+  get "video" => "video#index"
 
 
   # The priority is based upon order of creation:
