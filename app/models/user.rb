@@ -1,41 +1,23 @@
-require 'bcrypt'
-
 class User < ActiveRecord::Base
-	include BCrypt
-  attr_accessible :first_name, :email, :password, :password_confirmation
 
-  attr_accessor :password
-  before_save :encrypt_password
-  #command for ruby to rn the encrypt_password method BEFORE execting the save
+  # Include default devise modules. Others available are:
+  # :token_authenticatable, :confirmable,
+  # :lockable, :timeoutable and :omniauthable, :validatable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable
 
-  validates_confirmation_of :password
-  validates :password, :confirmation => true, :presence => { :on => :create }
-  #if the user has a password, s/he doesn't need to verify. it has already been created
+  # Setup accessible (or protected) attributes for your model
+  attr_accessible :email, :password, :password_confirmation, :remember_me
+ 
+ validates :email, :presence => true
+ validates :password, :presence => true, :length => { :in => 6..20 }
+  validates :password_confirmation, :presence => true
 
-  validates :email, :uniqueness => true, :presence => true
-  #check for presence/uniqueness of email addres
+   attr_accessible :picture
+   
+  # has_attached_file :picture, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+  # #paperclip/imagemagick quickstart. Defines med/thumb sizes
 
-
-	def self.authenticate(email, password)
-		user = find_by_email(email)
-		if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
-			user
-			#if the user exists (not nil) and the user password hash equal the BCrypt encrtypted passwords, then it is a valid user
-		else
-			nil
-			#if there is no value in either the user password or email fields, it returns nil
-		end
-	end
-
-	def encrypt_password
-		if password.present?
-			self.password_salt
-			#if there is a password present, save it to the passwrod salt for encryption
-			self.password_salt = BCrypt::Engine.generate_salt
-			self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
-			#uses BCrypt to generate an encypted password string and matches it to the users password
-		end
-	end
-
+def 
 
 end

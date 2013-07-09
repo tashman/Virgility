@@ -1,0 +1,33 @@
+
+    <div class="places-formbox-wrapper">
+
+    	   <h3>Contact Name</h3>
+                       
+              <%= form_for @phone, :url => { :action => "create" } do |f| %>
+              <%= f.text_field :phone_name, :class => "phone_formbox", :placeholder => " ex. 'Jimmy', 'Mom', 'Dr. Jones'" %>
+               <% end %>
+    </div> <!--end formbox-wrapper-->
+
+
+    <div class="clear"></div>
+
+
+    <div class="places-formbox-wrapper">
+    	          
+    	    <h3>Contact Phone</h3>
+
+            <%= form_for @phone, :url => { :action => "create" } do |f| %>
+            <%= f.telephone_field :phone_number, :class => "phone_formbox", :placeholder => " ex. 212-799-2149" %>
+            <% end %>
+            
+    </div> <!--end formbox-wrapper-->
+    	     
+    <div class="places-formbox-wrapper">   
+                    
+            <%= form_for @phone, :url => { :action => "create" } do |f| %>
+            <%= f.submit "Save", :class => "phone_button" %>
+            <% end %>
+                   
+     
+    </div> <!-- end places formboxwrapper-->
+

@@ -1,91 +1,23 @@
-  <%= stylesheet_link_tag 'phone' %>        
-
-<div class="master-header">
-
-        <%= link_to "home/index" %><img src="images/Virgil-Logo.png">
-
-        <h2>Virgil: Phone</h2>
-
-        <h3>Welcome, Username</h3>
-
+<div class="master-header phone-header">
+         <%= link_to image_tag ('Virgil-Logo.png') %>
+         <h2>Virgil: Phone</h2>
+        <h3>Welcome, <%= @first_name %></h3>
         <div class="bumper phone-bumper"></div>
-        
 </div> <!--end master header-->
 
- <div id="master-formbox">
- 
- 
-           <div class="formbox-wrapper">
-                     <h3>Contact Name</h3>
-                    <form>
-                    <input type="text" name="phone-name" class="formbox">
 
-                    <%= form_for :phone do |f| %>
-                      <%= f.text_field :phone_name, :placeholder => " i.e. 'Dentist', 'Work', 'Uncle Ben's"  %>
-                       <% end %>
+<div class="phone-container">
+    
+      	 <%= render 'edit' %>
 
-                    </form>
-                    <br />
-            </div> <!--end formbox-wrapper-->
-            
-            
-             <div class="clear"></div>
-                    
-                    
-            <div class="formbox-wrapper">
-                     <h3>Contact Phone Number</h3>
-                    <input type="text" name="phone-number" class="formbox">
+         <%= render 'show' %>
+      
 
-                       <%= form_for :phone do |f| %>
-                        <%= f.text_field :phone_number, :placeholder => " ex. 212-799-2149" %>
-                         <% end %>
+<div class="master-footer phone-footer">
+	<%= render 'partials/footer' %>
+</div> <!--end master footer-->
 
-                    </form>
-             </div> <!--end formbox-wrapper-->
 
-                                 
-                <div class="formbox-wrapper buttonbox">
-                
-                    <input type="submit" class="button" name="phone-edit" value="Edit">
-
-                       <%= form_for :phone do |f| %>
-                        <%= f.submit :edit %>
-                         <% end %>
-
-                    <input type="submit" class="button" name="phone-save" value="Save">
-                    
-                           <%= form_for :phone do |f| %>
-                            <%= f.submit :save %>
-                             <% end %>
-
-                </div> <!--end formbox-wrapper-->
-         
-</div> <!--end master-formbox;-->
-
-         <div class="clear"></div>
-
-         
-                
-       <div class="phone-list-box"> 
-       
-                 <div class="placelist"><h3>Phone #1</h3></div>
-                 <div class="placelist"><h3>Phone #2</h3></div>
-                 <div class="placelist"><h3>Phone #3</h3></div>
-                 <div class="placelist"><h3>Phone #4</h3></div>
-                 <div class="placelist"><h3>Phone #5</h3></div>
-                 
-         </div> <!--end phone box list-->
-         
-
-          
-         </div>
-         </div>
-         </div>
-         </div>
-         </div>
-
- <div class="master-footer phone-footer">
-    <%= render "partials/footer" %>
-</div> 
-<!--end master footer-->
- 
+</div> <!-- end phone container -->
+        
+   

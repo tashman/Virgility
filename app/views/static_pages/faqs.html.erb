@@ -1,19 +1,14 @@
-  <%= stylesheet_link_tag 'faqs' %>
 
     <h1>Virgil: A Simple Mobile UI</h1>
 
             <div class="master-header">
-                  <a href="Index.html"><img src="images/Virgil-Logo.png"></a>
-                <h2>Virgil en Espanol</h2>
-                <h3><%= link_to "Casa", "dashboard#index" %></h3>
-                <div class="bumper green-bumper"></div>
+                  <%= link_to image_tag ('Virgil-Logo.png') %>
+                  <h2>Virgil FAQ's</h2>
+                <h3><%= link_to "Home", "home#index" %></h3>
+                <div class="bumper faq-bumper"></div>
         </div> <!--end master header-->
- <div class="container">
+ <div class="faqcontainer">
     		
-            <div id="titlebox">
-           			 <h1>FAQ's</h1>
-            </div> <!--end titlebox-->
-            
             <hr>
     
             <div class="faqheader">

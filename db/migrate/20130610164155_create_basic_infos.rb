@@ -5,7 +5,7 @@ class CreateBasicInfos < ActiveRecord::Migration
       t.string :last_name
       t.string :fact_one
       t.string :fact_two
-      t.string :emergency_contactstring
+      t.string :emergency_contact
       t.string :emergency_phone
       t.string :emergency_email
 

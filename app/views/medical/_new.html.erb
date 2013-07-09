@@ -1,0 +1,98 @@
+ <div class="medical-formbox-wrapper">
+          <h3>Primary Condition</h3>
+
+            <%= form_for @medical, :url => { :action => "create" } do |f| %>
+              <%= f.text_field :primary, :class => "medical-formbox", :placeholder => " ex. Down's Syndrome"  %>
+            <% end %>
+                        
+                   </div> <!--end formbox-wrapper-->
+                   
+                    <div class="clear"></div>
+                    
+                   <div class="medical-formbox-wrapper">
+                             <h3>Secondary Condition</h3>
+                           
+                           <%= form_for @medical, :url => { :action => "create" } do |f| %>
+            <%= f.text_field :secondary, :class => "medical-formbox", :placeholder => " ex. ex. Hemophelia" %>
+            <% end %>
+                        
+                    </div> <!--end formbox-wrapper-->
+                    
+                 <div class="clear"></div>
+                        
+                <div class="medical-formbox-wrapper">
+                         <h3>Emergency Contact </h3>
+
+            <%= form_for @medical, :url => { :action => "create" } do |f| %>
+            <%= f.text_field :emergency_contact, :class => "medical-formbox", :placeholder => " ex. 'Mary', 'Mom', 'Dr. Jones" %>
+            <% end %>
+                    
+            </div>
+
+            <div class="medical-formbox-wrapper">
+                      
+                 <h3>Emergency Contact #</h3>
+
+                          <%= form_for @medical, :url => { :action => "create" } do |f| %>
+            <%= f.text_field :emergency_phone, :class => "medical-formbox", :placeholder => " ex. 212-555-1212" %>
+            <% end %>
+                   
+                 </div> <!--end formbox-wrapper-->
+                 
+                  <div class="clear"></div>
+                         
+          <div class="medical-formbox-wrapper">
+                  <h3>Doctor Name (optional)</h3>
+              
+
+            <%= form_for @medical, :url => { :action => "create" } do |f| %>
+            <%= f.text_field :doctor_name, :class => "medical-formbox", :placeholder => " ex. Dr. Jones" %>
+            <% end %> 
+          </div>
+
+         <div class="medical-formbox-wrapper">
+            <h3>Doctor Phone (optional)</h3>
+              <%= form_for @medical, :url => { :action => "create" } do |f| %>
+            <%= f.text_field :doctor_phone, :class => "medical-formbox", :placeholder => " ex. 212-555-1212" %>
+            <% end %>
+   
+                          
+     
+                  </div> <!--end formbox-wrapper-->
+                  
+                   <div class="clear"></div>
+                     
+          <div class="medical-formbox-wrapper">
+                       <h3>Hospital Name (optional)</h3>
+                          <%= form_for @medical, :url => { :action => "create" } do |f| %>
+            <%= f.text_field :hospital_name, :class => "medical-formbox", :placeholder => " ex. Mt. Sinai Hospital" %>
+            <% end %>
+          </div>
+          
+          <div class="medical-formbox-wrapper">
+              <h3>Hospital Phone (optional)</h3>
+
+           <%= form_for @medical, :url => { :action => "create" } do |f| %>
+            <%= f.text_field :hospital_number, :class => "medical-formbox", :placeholder => " ex. 212-241-6500" %>
+            <% end %>
+                   
+                   </div> <!--end formbox-wrapper-->
+                   
+                    <div class="clear"></div>
+                       
+         
+        <div class="medical-buttonbox">
+
+            <%= form_for @medical, :url => { :action => "create" } do |f| %>
+              <%= f.submit :class => "medical-button", :value => "Save" %>
+            <% end %>
+  
+        </div> <!--end buttonbox-->
+
+
+
+      <div class="medical-imagearea">
+            <br />
+            <h4>Click to upload an image of yourself (optional).</h4>       
+                 
+      </div> <!--end imagearea-->

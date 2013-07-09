@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130627142821) do
+ActiveRecord::Schema.define(:version => 20130703020125) do
 
   create_table "basic_info_models", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -44,6 +44,10 @@ ActiveRecord::Schema.define(:version => 20130627142821) do
   create_table "homes", :force => true do |t|
     t.string   "home_address"
     t.string   "home_url"
+    t.string   "place_url"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.boolean  "gmaps"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
@@ -60,8 +64,11 @@ ActiveRecord::Schema.define(:version => 20130627142821) do
     t.string   "doctor_phone"
     t.string   "hospital_name"
     t.string   "hospital_number"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.string   "emergency_contact"
+    t.string   "emergency_email"
+    t.string   "emergency_phone"
   end
 
   create_table "phone_mobiles", :force => true do |t|
@@ -80,6 +87,9 @@ ActiveRecord::Schema.define(:version => 20130627142821) do
     t.string   "place_name"
     t.string   "place_address"
     t.string   "place_url"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.boolean  "gmaps"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end
@@ -98,8 +108,12 @@ ActiveRecord::Schema.define(:version => 20130627142821) do
     t.string   "first_name"
     t.string   "email"
     t.string   "password"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   create_table "video_mobiles", :force => true do |t|

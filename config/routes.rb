@@ -1,32 +1,74 @@
 VirgilRuby::Application.routes.draw do
 
+ get "home/index"
+root :to => 'home#index'
 
-  get "user/new"
+  resources :user
+  resources :sessions
+  resources :dashboard
+  resources :basicinfo
+  resources :home
+  resources :video 
+  resources :places
+  resources :phone
+  resources :medical
+  resources :take_me_home
 
-  get "home/index"
+  # get "user-new" => "user#new"
+  # get "user-show" =>"user#show"
+  # get "user-sign_up" =>"user#sign_up"
+  # get "user-sign_in" =>"user#sign_in"
+  # get "user-edit" =>"user#edit"
 
-  get "dashboard" => "dashboard#index"
+  # get "places" => "places#index"
+  # get "places-new" => "places#new"
+  # get "places-edit" => "places#edit"
+  # get "places-destroy" => "places#destroy"
+  # get "places-mobile" => "places#mobile"
+
+  # get "phone" => "phone#index"
+  # get "phone-new" => "phone#new"
+  # get "phone-edit" => "phone#edit"
+  # get "phone-destroy" => "phone#destroy"
+  # get "phone-mobile" => "phone#mobile"
+
+  # get "basicinfo" => "basicinfo#index"
+  # get "basicinfo-new" => "basicinfo#new"
+  # get "basicinfo-edit" => "basicinfo#edit"
+  # get "basicinfo-destroy" => "basicinfo#destroy"
+  # get "basicinfo-mobile" => "basicinfo#mobile"
+
+  # get "medical" => "medical#index"
+  # get "medical-new" => "medical#new"
+  # get "medical-edit" => "medical#edit"
+  # get "medical-destroy" => "medical#destroy"
+  # get "medical-mobile" => "medical#mobile"
+
+  # get "video" => "video#index"
+  # get "video-new" => "video#new"
+  # get "video-edit" => "video#edit"
+  # get "video-destroy" => "video#destroy"
+  # get "video-mobile" => "video#mobile"
+
+  # get "take_me_home" => "take_me_home#index"
+  # get "take_me_home-new" => "take_me_home#new"
+  # get "take_me_home-edit" => "take_me_home#edit"
+  # get "take_me_home-destroy" => "take_me_home#destroy"
+  # get "take_me_home-mobile" => "take_me_home#mobile"
+
   get "faqs" => "static_pages#faqs"
   get "espanol" => "static_pages#espanol"
-  get "learnmore" => "static_pages#learnmore"
+  get "learnmore" => "static_pages#learn_more"
+  get "phone_off" => "static_pages#phone_off"
+  get "places_off" => "static_pages#places_off"
+  get "medical_off" => "static_pages#medical_off"
+  get "basic_info_off" => "static_pages#basic_info_off"
+  get "video_off" => "static_pages#video_off"
+  get "take_me_home_off" => "static_pages#take_me_home_off"
 
-resources :places
 
-  get "places" => "places#index"
-      get "places/new"
-      get "places/edit"
-      get "placelist" => "places/show"
-      get "places/mobile"
 
-  get "faqs" => "static_pages#faqs"
-  get "espanol" => "static_pages#espanol"
-  get "learnmore" => "static_pages#learnmore"
 
-  get "phone" => "phone#index"
-  get "medical" => "medical#index"
-  get "basic_info" => "basic_info#index"
-  get "take_me_home" => "take_me_home#index"
-  get "video" => "video#index"
 
 
   # The priority is based upon order of creation:
@@ -78,7 +120,7 @@ resources :places
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-root :to => 'home#index'
+
 
   # See how all your routes lay out with "rake routes"
 

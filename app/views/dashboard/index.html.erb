@@ -1,270 +1,197 @@
 
-
-  <%= stylesheet_link_tag 'dashboard' %>
-   <%= stylesheet_link_tag 'header-footer' %>
-      <%= stylesheet_link_tag 'jquery.switch' %>
-    
-
-
-<div class="master-header">
-
-        <%= link_to root_url %><img src="images/Virgil-Logo.png">
-
+ <div class="master-header">
+       <%= image_tag ('Virgil-Logo.png') %>
         <h2>Virgil: Dashboard</h2>
-
-        <h3>Welcome, Username</h3>
-
-        <div class="bumper green-bumper"></div>
-        
+        <h3>Welcome, <%= @first_name %></h3>
+    <div class="bumper info-green dashboard-bumper"></div>
 </div> <!--end master header-->
-
-
-<script>
-    window.prettyPrint && prettyPrint();
-    $('#mySwitch').on('switch-change', function (e, data) {
-        var $el = $(data.el)
-            , value = data.value;
-        console.log(e, $el, value); 
-    });
-    $('#toggle-state-switch-button').on('click', function () {
-        $('#toggle-state-switch').bootstrapSwitch('toggleState');
-    });
-    $('#toggle-state-switch-button-on').on('click', function () {
-        $('#toggle-state-switch').bootstrapSwitch('setState', true);
-    });
-    $('#toggle-state-switch-button-off').on('click', function () {
-        $('#toggle-state-switch').bootstrapSwitch('setState', false);
-    });
-</script>
-
-
 
 <div id="top-of-page-padding"></div>
 
-<div class="outer-shell">
-        <div class="row">
-        		<div class="float-left">
-        			
+<div class="dashboard-outer-shell">
+        <div class="dashboard-row">
+            <div class="float-left">
 
+<div class="dashboard-option-box border-green">
 
-<div class="option-box border-green">
-
-                <div class="iconbox">
-                		 <div class="inner-icon-box info-green">
-                                	<div class="infosprite"></div>
-                           </div> <!--end inner-icon-box-->
-                 </div> <!--end iconbox-->
-                        
-                <div class="switchbox">
-            
-            		<div class="textbox">
-                      		<h2>Basic Info</h2>
-                          <h3>Just the facts</h3>
-                  </div> <!--end textbox-->
-                                                    
-                   <div class="switch switch-large border-green info-green">
-              				  <input type="checkbox" checked />
-                	 </div> <!--end switch-->
-
-
-      					<div class="edit-button info-green">
-
-                      <p>Edit</p>
-                 </div> <!--end edit button-->
+            <div class="dashboard-iconbox">
+                 <div class="dashboard-inner-icon-box info-green">
+                              <div class="infosprite"></div>
+                       </div> <!--end inner-icon-box-->
+             </div> <!--end iconbox-->
                     
+            <div class="dashboard-switchbox">
+            
+                  <div class="dashboard-textbox">
+                            <h2>Basic Info</h2>
+                               <h3>Just the facts</h3>
+                        </div> <!--end textbox-->
+                                                    
+                         <div class="switch switch-large border-green info-green">
+                        <input type="checkbox" checked />
+                    </div> <!--end switch-->
 
-     	</div> <!--end switchbox-->
+          <%= link_to "Edit", "basic_info#index", :class => "dashboard-edit-button info-green" %>
+                     
+
+      </div> <!--end switchbox-->
     
 </div> <!--end option-box-->
 
+            </div> <!--end float-left-->
+        <div class="float-right">
 
-				
-        		</div> <!--end float-left-->
-            <div class="float-right">
+<div class="dashboard-option-box border-blue">
 
-
-
-<div class="option-box border-blue">
-
-            <div class="iconbox">
-                            <div class="inner-icon-box phone-blue">
-                            		<div class="phonesprite"></div>
+            <div class="dashboard-iconbox">
+                            <div class="dashboard-inner-icon-box phone-blue">
+                                <div class="phonesprite"></div>
                             </div> <!--end inner-icon-box-->
              </div> <!--end iconbox-->
                     
-            <div class="switchbox">
+            <div class="dashboard-switchbox">
             
-            		    <div class="textbox">
-                      			<h2>Phone</h2>
-                            <h3>Important people</h3>
-                    </div> <!--end textbox-->
+                  <div class="dashboard-textbox">
+                            <h2>Phone</h2>
+                               <h3>Important people</h3>
+                        </div> <!--end textbox-->
                                                     
                         <div class="switch switch-large phone-blue border-blue">
-              				  <input type="checkbox" checked />
-                		</div> <!--end switch-->
-	
-                    <div class="edit-button phone-blue">
-                    <p>Edit</p>
-                    </a><!--end edit button-->
+                        <input type="checkbox" checked />
+                    </div> <!--end switch-->
+  
+                     <%= link_to "Edit", "phone#index", :class => "dashboard-edit-button phone-blue"%>
 
-     	</div> <!--end switchbox-->
+
+      </div> <!--end switchbox-->
     
 </div> <!--end option-box-->
-
-
 
         </div> <!--end float-right-->
         
         <div class="float-clear"></div>
         
+        <div class="row">
         <div class="float-left">
 
 
+<div class="dashboard-option-box border-orange">
 
-<div class="option-box border-orange">
-
-          <div class="iconbox">
-                <div class="inner-icon-box places-orange">
-                       <div class="placesprite"></div>
-                </div> <!--end inner-icon-box-->
-          </div> <!--end iconbox-->
+            <div class="dashboard-iconbox">
+                            <div class="dashboard-inner-icon-box places-orange">
+                                   <div class="placesprite"></div>
+                            </div> <!--end inner-icon-box-->
+             </div> <!--end iconbox-->
                     
-          <div class="switchbox">
+            <div class="dashboard-switchbox">
             
-            		    <div class="textbox">
-                      			<h2>Places</h2>
-                            <h3>Key locations</h3>
-                     </div> <!--end textbox-->
+                  <div class="dashboard-textbox">
+                            <h2>Places</h2>
+                               <h3>Key locations</h3>
+                        </div> <!--end textbox-->
                                                     
-                    <div class="switch switch-large places-orange border-orange">
-              				  <input type="checkbox" checked />
-                		</div> <!--end switch-->
-	
-                  
-                      <div class="edit-button places-orange">
+           <div class="switch switch-large places-orange border-orange">
+                        <input type="checkbox" checked />
+                    </div> <!--end switch-->
+  
+                    
+                     <%= link_to "Edit", "places#index", :class => "dashboard-edit-button places-orange" %>
 
-                          <p>Edit</p>
-                      </div> <!--end edit button-->
-                    </a>
-
-     	    </div> <!--end switchbox-->
+      </div> <!--end switchbox-->
     
 </div> <!--end option-box-->
-
 
         </div> <!--end float-left-->
         <div class="float-right">
 
+<div class="dashboard-option-box border-lavender">
 
-<div class="option-box border-lavender">
-
-            <div class="iconbox">
-                            <div class="inner-icon-box home-lavender">
-                            		<div class="homesprite"></div>
+            <div class="dashboard-iconbox">
+                            <div class="dashboard-inner-icon-box home-lavender">
+                                <div class="homesprite"></div>
                             </div> <!--end inner-icon-box-->
              </div> <!--end iconbox-->
                     
-            <div class="switchbox">
+            <div class="dashboard-switchbox">
             
-            		     <div class="textbox">
-                      			<h2>Home</h2>
-                            <h3>Get me there now</h3>
-                     </div> <!--end textbox-->
+                  <div class="dashboard-textbox">
+                            <h2>Home</h2>
+                               <h3>Get me there now</h3>
+                        </div> <!--end textbox-->
                                                     
-                    <div class="switch switch-large border-lavender home-lavender">
-              				  <input type="checkbox" checked />
-                		</div> <!--end switch-->
-	
-                  
-                    <div class="edit-button home-lavender">
+                              <div class="switch switch-large border-lavender home-lavender">
+                        <input type="checkbox" checked />
+                    </div> <!--end switch-->
+  
+        <%= link_to "Edit", "take_me_home#index", :class => "dashboard-edit-button home-lavender" %>
 
 
-                    <p>Edit</p>
-                    </div> <!--end edit button-->
-                    </a>
 
-     	</div> <!--end switchbox-->
+      </div> <!--end switchbox-->
     
 </div> <!--end option-box-->
 
-
-        </div><!--end float-right-->
+</div><!--end float-right-->
         
         <div class="float-clear"></div>
         
-    
+        <div class="dashboard-row">
         <div class="float-left">
 
+<div class="dashboard-option-box border-red">
 
-<div class="option-box border-red">
-
-            <div class="iconbox">
-                      <div class="inner-icon-box medical-red">
-                            <div class="medsprite"></div>
-                      </div> <!--end inner-icon-box-->
+            <div class="dashboard-iconbox">
+                            <div class="dashboard-inner-icon-box medical-red">
+                                  <div class="medsprite"></div>
+                            </div> <!--end inner-icon-box-->
              </div> <!--end iconbox-->
                     
-            <div class="switchbox">
+            <div class="dashboard-switchbox">
             
-            		  <div class="textbox">
-                      			<h2>Medical</h2>
-                             <h3>Optional info and links</h3>
+                  <div class="dashboard-textbox">
+                            <h2>Medical</h2>
+                               <h3>Optional info and links</h3>
                         </div> <!--end textbox-->
                                                     
                                <div class="switch switch-large border-red medical-red">
-              				  <input type="checkbox" checked />
-                		</div> <!--end switch-->
-	
-                   
-                    <div class="edit-button medical-red">
+                        <input type="checkbox" checked />
+                    </div> <!--end switch-->
+              
+                <%= link_to "Edit", "medical#index", :class => "dashboard-edit-button medical-red" %>
 
-                    <p>Edit</p>
-                    </div> <!--end edit button-->
-                    </a>
 
-     	</div> <!--end switchbox-->
+      </div> <!--end switchbox-->
     
 </div> <!--end option-box-->
-
-
 
         </div> <!--end float-left-->
         <div class="float-right">
 
+<div class="dashboard-option-box border-purple">
 
-<div class="option-box border-purple">
-
-            <div class="iconbox">
-                            <div class="inner-icon-box video-purple">
-                            			<div class="vidsprite"></div>
+            <div class="dashboard-iconbox">
+                            <div class="dashboard-inner-icon-box video-purple">
+                                  <div class="vidsprite"></div>
                             </div> <!--end inner-icon-box-->
              </div> <!--end iconbox-->
                     
-            <div class="switchbox">
+            <div class="dashboard-switchbox">
             
-            		  <div class="textbox">
-                      			<h2>Video link</h2>
-                            <h3>For complex situtions</h3>
+                  <div class="dashboard-textbox">
+                            <h2>Video link</h2>
+                               <h3>For complex situtions</h3>
                         </div> <!--end textbox-->
                                                     
                              <div class="switch switch-large video-purple border-purple">
-              				  <input type="checkbox" checked />
-                		</div> <!--end switch-->
-	
-                  
-                    <div class="edit-button video-purple">
+                        <input type="checkbox" checked />
+                    </div> <!--end switch-->
+  
+                  <%= link_to "Edit", "video#index", :class => "dashboard-edit-button video-purple" %>
 
-                           <%= link_to "video" %>
-
-                    <p>Edit</p>
-                    </div> <!--end edit button-->
-                    </a>
-
-     	</div> <!--end switchbox-->
+      </div> <!--end switchbox-->
     
-</div> <!--end option-box-->
+</div> <!--end dashboard-option-box-->
 
-     
      </div> <!--end float-right-->
      
      <div class="float-clear"></div>
@@ -274,28 +201,20 @@
  </div>
  </div>
  </div>
-<
  
- 
-<div class="directionsbox">
-
-		<h2>Directions</h2>
-
+<div class="dashboard-directionsbox">
+    <h2>Directions</h2>
         <h3>The Dashboard lets you choose what information you want to display.</h3>
-
         <h3>Choose any of the 6 options above.</h3>
-
-        <h4>Press EDIT to access the page, and enter the relevant information you need. Toggle the ON/OFF switch to display that feature on your mobile device.</h4>
-
-        <h4>*Note: Virgil is meant to be RUN on a phone and EDITED on a desktop/tablet.</h4>
+        <h3>Press EDIT to access the page, and enter the relevant information you need.</h3>
+        <h3> Toggle the ON/OFF switch to display that feature on your mobile device.
+          <h4>*Note: Virgil is meant to be RUN on a phone and EDITED on a desktop/tablet.</h4>
 
 </div> <!--end directionsbox-->
 
- 
-               
-<div class="master-footer green-footer">
 
-   <%= render "partials/footer" %>
-   
+ 
+<div class="master-footer border-green dashboard-foot">
+  <%= render "partials/footer" %>
 </div> 
 <!--end master footer-->

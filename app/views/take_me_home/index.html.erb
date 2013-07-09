@@ -1,86 +1,52 @@
-  <%= stylesheet_link_tag 'take_me_home' %>
 
-<div class="master-header">
-
-        <%= link_to "home/index" %><img src="images/Virgil-Logo.png">
-
+              <div class="master-header TMH-header">
+              <%= link_to image_tag ('Virgil-Logo.png') %>
         <h2>Virgil: Take Me Home</h2>
-
-        <h3>Welcome, Username</h3>
-
-        <div class="bumper home-bumper"></div>
-        
+        <h3>Welcome, <%= @first_name %></h3>
+        <div class="bumper TMH-bumper"></div>
 </div> <!--end master header-->
 
 
- <div class="container">
+ <div class="TMH-container">
      
-            <div class="formbox-wrapper">
-                     <h3>Enter your home address</h3>
-                    <input type="text" name="home-address" class="formbox">
+        <div class="TMH-formbox-wrapper">
+            <h3>Enter your home address</h3>
+              <%= form_for @take_me_home, :url => { :action => "create" } do |f| %>
+              <%= f.text_field :take_me_home, :class => "TMH-formbox", :placeholder => " ex. '34 Valley Road, Walla Walla, WA 99632'"  %>
+                <% end %>
 
-                      <% form_for :take_me_home do |f| %>
-                              <%= f.label :home_address %>
-                              <%= f.text_field :home_url, :placeholder => " ex. '34 Valley Road, Walla Walla, WA 99632'" %>
-                     <% end %>
-
-                    </form>
-                    <br />
-             </div><!-- end "formbox-wrapper-->
-
-
-
-
-         <div class="buttonbox">
-         
-            	<input type="submit" class="button" value="Preview">
-                    <% form_for :take_me_home do |f| %>
-                        <%= f.submit :preview %>
-                     <% end %>
-
-                 </form>
-
-              	<input type="submit" class="button" value="Save">
-                  
-                   <% form_for :take_me_home do |f| %>
-                        <%= f.submit %>
-                    <% end %>
-
-                </form>
-
-         </div><!--end buttonbox-->
-
-             
-         <div id="previewbox">
-
-             <iframe width="584" height="284" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=171+west+street+white+plains+ny&amp;aq=&amp;sll=42.746632,-75.770041&amp;sspn=6.018244,9.063721&amp;ie=UTF8&amp;hq=&amp;hnear=171+West+St,+White+Plains,+Westchester,+New+York+10605&amp;t=m&amp;ll=40.991755,-73.74238&amp;spn=0.011921,0.050039&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
-            
-         </div> <!--end previewbox-->
-             
-         
+        </div><!-- end "formbox-wrapper-->
  
-        <div class="directionsbox">
+<div class="TMH-buttonbox">
+         
 
-              <h3>Directions</h3>
+           <%= form_for @take_me_home, :url => { :action => "create" } do |f| %>
+             <%= f.submit :take_me_home, :value => "Save", :class => "TMH-button" %>
+            <% end %>
+ 
 
-                <h4>"Take Me Home' will immediately produce a Google Map from your current location, to the one entered in the form above.</h4>
+             
+             <div id="TMH-previewbox">
+             <iframe width="584" height="284" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=171+west+street+white+plains+ny&amp;aq=&amp;sll=42.746632,-75.770041&amp;sspn=6.018244,9.063721&amp;ie=UTF8&amp;hq=&amp;hnear=171+West+St,+White+Plains,+Westchester,+New+York+10605&amp;t=m&amp;ll=40.991755,-73.74238&amp;spn=0.011921,0.050039&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+             </div> <!--end previewbox-->
+             
+         
 
-                <h4>By entering your home address, you will always have the ability to find your way home with a single button push.</h4>
-
-                <h4>Use the preview button to confirm your address, then press 'SAVE' to imprint it on the mobile app.</h4>
-
-        </div> <!--end directionsbox-->
+ 
+    <div class="TMH-directionsbox">
+            <h3>Directions</h3>
+            <h4>"Take Me Home' will immediately produce a Google Map from your current location, to the one entered in the form above.</h4>
+            <h4>By entering your home address, you will always have the ability to find your way home with a single button push.</h4>
+            <h4>Use the preview button to confirm your address, then press 'SAVE' to imprint it on the mobile app.</h4>
+    </div> <!--end directionsbox-->
 
 
 </div> <!--end container-->
-
-
          </div>
          </div>
 
- <div class="master-footer home-footer">
 
-   <%= render "partials/footer" %>
-   
+ <div class="master-footer TMH-footer">
+     <%= render "partials/footer" %>
 </div> 
 <!--end master footer-->

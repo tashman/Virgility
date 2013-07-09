@@ -1,0 +1,81 @@
+<div class="master-header phone-header">
+
+            <%= link_to image_tag ('Virgil-Logo.png') %>
+            <h2>Virgil: Phone</h2>
+            <h3>Welcome, <%= @first_name %></h3>
+
+        <div class="bumper phone-bumper"></div>
+
+</div> <!--end master header-->
+        
+<div class="phone-formbox">
+ 
+ 
+           <div class="phone-formbox-wrapper">
+                 <h3>Contact Name</h3>
+                   
+                    <%= form_for @phone, :url => { :action => "create" } do |f| %>
+                    <%= f.text_field :phone_name, :class => "phone_formbox", :placeholder => " ex. 'Jimmy', 'Mom', 'Dr. Jones'" %>
+                    <% end %>
+
+            </div> <!--end formbox-wrapper-->
+            
+            
+             <div class="clear"></div>
+                    
+                    
+            <div class="phone-formbox-wrapper">
+                    <h3>Contact Phone Number</h3>
+
+                        <%= form_for @phone, :url => { :action => "create" } do |f| %>
+                        <%= f.telephone_field :phone_number, :class => "phone_formbox", :placeholder => " ex. 212-799-2149" %>
+                        <% end %>
+
+             </div> <!--end formbox-wrapper-->
+                 
+            
+                <div class="phone-formbox-wrapper phone-buttonbox">
+
+               
+                        <%= form_for @phone, :url => { :action => "create" } do |f| %>
+                        <%= f.submit "Edit", :class => "phone_button" %>
+                        <% end %>
+                  
+                
+                         <%= form_for @phone, :url => { :action => "create" } do |f| %>
+                        <%= f.submit "Save", :class => "phone_button" %>
+                        <% end %>
+               
+                </div> <!--end phone formbox-wrapper-->
+         
+</div> <!--end master-formbox;-->
+
+         <div class="clear"></div>
+         
+                
+       <div class="phone-list-box"> 
+       
+                 <div class="phone-list"><h3>Phone #1</h3></div>
+                 <div class="phone-list"><h3>Phone #2</h3></div>
+                 <div class="phone-list"><h3>Phone #3</h3></div>
+                 <div class="phone-list"><h3>Phone #4</h3></div>
+                 <div class="phone-list"><h3>Phone #5</h3></div>
+                 
+         </div> <!--end phone box list-->
+         
+         
+     
+          
+         </div>
+         </div>
+         </div>
+         </div>
+         </div>
+         
+         <div class="master-footer phone-footer">
+    <ul>
+        <%= render "partials/footer" %>
+         
+     </ul>
+</div> 
+<!--end master footer-->

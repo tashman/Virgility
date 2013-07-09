@@ -1,0 +1,37 @@
+<div class="mobile-index-frame">
+
+		<div class="mobile-index-masterbox">
+        
+             	<div class="mobile-index-titlebox">
+        				<h1>Virgil</h1>
+        		</div> <!--end mobile-index-titlebox-->
+   
+   	 <!-- <a href="#"><div class="virgil-logo"></div></a>-->
+     
+    <div class="mobile-index-loginframe">
+                
+          <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+
+          <%= f.email_field :email, :placeholder => "email address", :class => "mobile-index-input-box", :autofocus => true %>
+
+
+          <%= f.password_field :password, :class => "mobile-index-input-box", :placeholder => "password" %>
+
+           <% if devise_mapping.rememberable? -%>
+          
+           <div><h4><%= f.check_box :remember_me %> <%= f.label :remember_me %></h4></div>
+              <% end -%>
+
+            <div><%= f.submit "Sign in", :class => "mobile-index-input-button" %></div>
+              <% end %>	
+    
+    </div><!--end mobile-index-loginframe-->
+             
+                   <div class="mobile-index-alertbox">
+                   			 <h3>Not a member? Click <%= link_to "Here", "home/index", :mobile = 0 %> to visit our desktop site and register for an account.</h3>
+     				 </div> <!--end mobile-index-alertbox-->
+      
+    
+      </div> <!--end mobile-index-masterbox-->
+      
+</div> <!--end mobile-index-frame-->

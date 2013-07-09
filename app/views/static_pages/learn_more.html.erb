@@ -1,24 +1,22 @@
-  <%= stylesheet_link_tag 'Learn-More' %>
-
 <h1>Virgil: A Simple Mobile UI</h1>
 
     <div class="master-header">
-        <a href="Index.html"><img src="images/Virgil-Logo.png"></a>
-        <h2>Virgil: Learn More</h2>
-        <h3><% link_to "basic_info" %>Create an account</a></h3>
-        <div class="bumper green-bumper"></div>
+          <%= link_to image_tag ('Virgil-Logo.png') %>
+          <h2>Virgil: Learn More</h2>
+         <h3><%= link_to "Home", "homew#index" %></h3>
+        <div class="bumper green-bumper LM-bumper"></div>
 </div> <!--end master header-->
 
-<div id="container">
+<div class="LM-container">
 
-    <div id="hero-box">
+    <div class="LM-hero-box">
      
         <h3>Virgil is a simplified mobile interface with customizeable options that let you display only the essential features you need.<br />
          Virgil is designed for non-smartphone people. Whether child, elderly, special needs, or just technologically challenged, Virgil can help make you and your' families lives simpler, easier, and safer.</h3>
     
     </div> <!--end herobox-->
     
-        <div id="content-box">
+        <div class="LM-content-box">
         
                     <h2>Simple</h2>
                     <h3>Core features from your phone simplified into a clean, large, easy to read user interface.
@@ -36,7 +34,7 @@
 </div> <!--end container-->
 
 
-<div class="master-footer green-footer">
+<div class="master-footer green-footer LM-footer">
 
    <%= render "partials/footer" %>
    

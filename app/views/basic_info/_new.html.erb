@@ -1,0 +1,66 @@
+div class="Basic_info-formbox-wrapper">
+
+              <h4>First Name</h4>
+
+              <%= form_for @basicinfo, :url => { :action => "create" } do |f| %>
+              <%= f.text_field :first_name, :class => "Basic_info-formbox border-green", :placeholder => " required"  %>
+              <% end %>
+
+        </div> <!--end formbox-wrapper-->
+                   
+                    <div class="clear"></div>
+                    
+        <div class="Basic_info-formbox-wrapper">
+            <h4>Last Name</h4>
+                
+            <%= form_for @basicinfo, :url => { :action => "create" } do |f| %>
+              <%= f.text_field :last_name, :class => "Basic_info-formbox border-green", :placeholder => " optional"  %>
+              <% end %>
+
+        </div> <!--end formbox-wrapper-->
+                    
+            <div class="clear"></div>
+                   
+        <div class="Basic_info-formbox-wrapper">
+            <h4>Important Fact #1</h4>
+            
+                <%= form_for @basicinfo do |f| %>
+                <%= f.text_field :fact_one, :class => "Basic_info-formbox border-green", :placeholder => " important fact about you"  %>
+                 <% end %>
+
+              <br />
+        </div> <!--end formbox-wrapper-->
+                    
+            <div class="clear"></div>
+                    
+        <div class="Basic_info-formbox-wrapper">
+                <h4>Important Fact  #2</h4>                      
+                  <%= form_for @basicinfo do |f| %>
+                <%= f.text_field :fact_two, :class => "Basic_info-formbox border-green", :placeholder => " other info about you"  %>
+                 <% end %>
+    
+            <br />
+         </div> <!--end formbox-wrapper-->
+                     
+                      <div class="clear"></div> 
+
+                       <div id="Basic_info-imagearea">
+
+
+      </div> <!--end imagearea-->
+      
+      
+             
+      <div class="Basic_info-buttonbox">
+         
+       
+               <%= form_for @basicinfo do |f| %>
+                <%= f.submit :edit, :class => "Basic_info-button", :value => "Edit" %>
+                <% end %>
+
+               <%= form_for @basicinfo do |f| %>
+                <%= f.submit :class => "Basic_info-button", :value => "Save" %>    
+                 <% end %>
+     
+     </div><!--end buttonbox-->
+                        

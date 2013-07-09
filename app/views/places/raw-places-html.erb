@@ -1,0 +1,21 @@
+
+  <%= form_for @places, :url => { :action => "create" } do |f| %>
+<%= f.text_field :place_name, :class => "places-formbox", :placeholder => " ex. 'Dad's', 'Work', 'Dentist', " %>
+<% end %>
+
+
+  <%= form_for(@places) do |f| %>
+            <%= f.text_field :place_address, :class => "places_formbox", :placeholder => " 34 Valley Road Walla Walla, WA 99362" %>
+            <% end %>
+
+
+      <%= form_for(@places) do |f| %>
+      		  <%= f.submit :class => "places_button", :value => "Preview" %>
+      		  <% end %>
+   
+
+      	<%= form_for(@places) do |f| %>
+      		  <%= f.submit :class => "places_button", :value => "Save" %>
+      		  <% end %>
+
+                

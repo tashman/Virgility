@@ -1,131 +1,16 @@
-  <%= stylesheet_link_tag 'basic_info' %>
-
-<div class="master-header">
-
-        <%= link_to "home/index" %><img src="images/Virgil-Logo.png">
-
-        <h2>Virgil: Basic info</h2>
-
-        <h3>Welcome, <%= user.email %></h3>
-
-        <div class="bumper green-bumper"></div>
-        
+<div class="master-header Basic_info-bumper">
+       <%= link_to "home/index" %><img src="images/Virgil-Logo.png">
+        <h2>Basic Info</h2>
+         <h3>Welcome, <%= @first_name %></h3>
+        <div class="bumper Basic_info-bumper"></div>
 </div> <!--end master header-->
 
+ <div id="Basic_info-master-formbox">
 
- <div class="master-formbox formbox-basic">
- 
-                  <div class="formbox-wrapper">
-                            <h3>First Name</h3>
-                               <form>
-                            <input type="text" name="firstname" class="formbox">
-                  
-                             <%= form_for :basic_info do |f| %>
-                             <%= f.text_field :first_name, :placeholder => " required"  %>
-                               <% end %>
+ <%= render 'new' %>
 
-                          </form>
-                             <br />
-                   </div> <!--end formbox-wrapper-->
-                   
-                    <div class="clear"></div>
-                    
-                   <div class="formbox-wrapper">
-                             <h3>Last Name</h3>
-                            <form>
-                            <input type="text" name="lastname" class="formbox">    
-
-                               <%= form_for :basic_info do |f| %>
-                               <%= f.text_field :last_name, :placeholder => " optional" %>
-                                <% end %>
-
-                            </form>
-                            <br />
-                    </div> <!--end formbox-wrapper-->
-                    
-                 <div class="clear"></div>
-                   
-                    <div class="formbox-wrapper">
-                         <h3>Important Fact #1</h3>
-                        <input type="text" name="important1" class="formbox">
-                          
-                           <%= form_for :basic_info do |f| %>
-                           <%= f.text_field :fact_one, :placeholder => " important fact about you"  %>
-                            <% end %>
-
-                        </form>
-                        <br />
-                    </div> <!--end formbox-wrapper-->
-                    
-                     <div class="clear"></div>
-                    
-                      <div class="formbox-wrapper">
-                         <h3>Important Fact  #2</h3>
-                        <input type="text" name="important2" class="formbox">
-
-                           <%= form_for :basic_info do |f| %>
-                           <%= f.text_field :fact_two, :placeholder => " secondary info "  %>
-                            <% end %>
-
-                        </form>
-                        <br />
-                     </div> <!--end formbox-wrapper-->
-                     
-                      <div class="clear"></div> 
-                      <br />
-                
-                          
-                
-    </div> <!--end master formbox-->
-    
-                        <div class="clear"></div>
-                      
-                        
-                        <div id="imagearea">
-                  <div class="button">
-                        <h5>Upload an image</h5>
-                   </div><!--end button-->
-              
-                  <h3>Click to upload an image of yourself (optional).</h3> 
-
-                  <h4>Reccomended dimensions: 300x150. Accepted file types: .jpg, .png, .tif, .gif</h4>
-
-      </div> <!--end imagearea-->
-      
-
-             
-      <div class="buttonbox">
-         
-            <input type="submit" class="button" value="Edit">
-
-                 <%= form_for :basic_info do |f| %>
-                  <%= f.submit :edit %>
-                   <% end %>
-
-            <input type="submit" class="button" value="Save">
-
-                <%= form_for :basic_info do |f| %>
-                  <%= f.submit :save %>
-                    <% end %>
-
-      </div> <!--end buttonbox-->
-
-
-  <div class="master-footer green-footer ">
-
-         <%= render "partials/footer" %>
-
-  </div> 
-
-         
-         </div>
-         </div>
-         </div>
-         </div>
-         </div>
-         </div>
-         
-
-         
-
+      <div class="master-footer border-green">
+      	
+   <%= render "partials/footer" %>
+</div> 
 

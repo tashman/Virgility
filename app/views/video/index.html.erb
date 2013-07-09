@@ -1,97 +1,30 @@
-  <%= stylesheet_link_tag 'video' %>
 
-
-
-<div class="master-header">
-
-        <%= link_to "home/index" %><img src="images/Virgil-Logo.png">
-
-        <h2>Virgil: Phone</h2>
-
-        <h3>Welcome, Username</h3>
-
+   <div class="master-header video-header">
+        <%= link_to image_tag ('Virgil-Logo.png') %> 
+        <h2>Virgil: Upload a Video</h2>
+        <h3>Welcome, <%= @first_name %></h3>
         <div class="bumper video-bumper"></div>
-        
 </div> <!--end master header-->
 
- <div id="master-formbox">
- 
-                  <div class="formbox-wrapper">
-                            <h3>Insert URL to YouTube/Vimeo link</h3>
 
-                            <form>
-                                <input type="text" name="url" class="formbox">
-
-                            <% form_for :video do |f| %>
-                             <%= f.text_field :video_url, :placeholder => " ex. http://www.youtube.com/U34fb^a23"  %>
-                               <% end %>
-
-                            </form>
-                             <br />
-
-                   </div> <!--end formbox-wrapper-->
-
-                    <div class="clear"></div>
-                    
-                   <div class="formbox-wrapper">
-                             <h3>Descriptive text/call to action</h3>
-
-                         <form>
-                            <input type="text" name="calltoaction" class="formbox">
-
-                            <% form_for :video do |f| %>
-                             <%= f.text_field :video_description, :placeholder => " ex. This video shows what to do if Billy has a seizure"%>
-                            <% end %>
-
-                        </form>
-                        <br />
-
-                    </div> <!--end formbox-wrapper-->
-                    
-                 <div class="clear"></div>
-
-             <div class="buttonbox">
-          
-            	       <input type="submit" class="button" name="video-preview" value="Preview">
-                       
-                            <% form_for :video do |f| %>
-                            <%= f.submit :preview %>
-                            <% end %>
-                        </form>
-
-                <input type="submit" class="button" name="video-save" value="Save">
-                        <% form_for :video do |f| %>
-                        <%= f.submit %>
-                        <% end %>
-         
-   
-             <div id="previewbox">
-             			<iframe width="584" height="284" src="http://www.youtube.com/embed/h3pGGjdBzns?rel=0" frameborder="0" allowfullscreen></iframe>
-             </div> <!--end previewbox-->
-
-   
- </div> <!-- end master formbox -->
-
+    <div class="video-spacer">
+  <%= render "new" %>
+    </div> <!-- end video spacer -->
+        
  
  
-        <div class="directionsbox">
-
+        <div class="video-directionsbox">
                 <h2>Directions</h2>
-
                 <h3>This feature lets you upload a video explaining what do do in an emergency situation. </h3>
-
-                <h4>You can't be there all the time, but complex situations sometimes call for explicit instructions that the primary user may not be able to communicate.</h4>
-
-                <h4>You create the video, and you share what you feel is necessary. Upload your video to YouTube,  Vimeo, or other service, and insert the link in the form above, as well as a clear call to action for anyone viewing this video.</h4>
+                <h3>You can't be there all the time, but complex situations sometimes call for explicit instructions  that the primary user may not be able to communicate.</h3>
+                <h3>You create the video, and you share what you feel is necessary. Upload your video to YouTube, Vimeo, or other service, and insert the link in the form above, as well as a clear call to action for anyone viewing this video.</h3>
   
         
         </div> <!--end directionsbox-->
 
-               
-<div class="master-footer video-footer">
+  
 
-   <%= render "partials/footer" %>
-   
+ <div class="master-footer video-footer">
+    <%= render "partials/footer" %>
 </div> 
 <!--end master footer-->
-
