@@ -1,6 +1,6 @@
 
      <% if mobile_device? %>
-      <%= redirect to "home/mobile_login", :mobile = 1 %>
+      <%= redirect to "home/mobile_login" %>
       <% end %>
   
    <div class="index-container">
@@ -59,10 +59,7 @@
 
                   <div class="index-formbox-wrapper">
                     
-                        <h3>Email address</h3>
-                      <%= form_for(@user, :as => user_path,  :class => "index-login-formbox") do |f| %>
-                        
-                        <%= f.email_field :email, :autofocus => true %>
+                    
                                 
                    </div> <!--end formbox-wrapper-->
                    
@@ -134,4 +131,4 @@
   <%= render "partials/footer" %>
 </div> 
 <!--end master footer-->
-    
+ 

@@ -7,6 +7,9 @@ gem 'rails', '3.2.12'
 
 gem 'sqlite3'
 
+gem "better_errors", ">= 0.7.2", :group => :development
+gem "binding_of_caller", ">= 0.7.1", :group => :development, :platforms => [:mri_19, :rbx]
+
 
 # Gems used only for assets and not required
 # in production environments by default.

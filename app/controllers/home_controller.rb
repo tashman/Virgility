@@ -1,15 +1,11 @@
-class UserController < ApplicationController
+class HomeController < ApplicationController
+
 
    def index
-   	if user_signed_in?
-   		redirect_to :controller => 'dashboard', :action => 'index'
-   	end
-   	
     @user = User.all
-
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @users }
+      format.json { render json: @user }
     end
   end
 
@@ -86,8 +82,7 @@ class UserController < ApplicationController
     end
   end
 
- def mobile_login
- end
+
  
 end
 
